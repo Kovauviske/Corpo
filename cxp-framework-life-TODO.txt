@@ -1,0 +1,10 @@
+testar prender player mais de uma vez (usando bounty e cop)
+
+
+arrumar setmappos
+arrumar roupas da cop e samu que buga a loja de roupas deles (changeClothing)
+arrumar .ini do extdb3
+arrumar BEFilters (publicVariable remoteexec)
+arrumar fn_gangUpdate.sqf
+arrumar funcao de trancar e destrancar caixas da casa
+

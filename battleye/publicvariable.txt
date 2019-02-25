@@ -1,0 +1,3 @@
+//regex
+1 ""
+5 "" !=bafTuirY_ncioe9f !=BIS_fnc_preload_server !=AH_STARTED_TWICE !=AHKickLog_IS_NIL !=PVAHR_[a-z,0-9]{10,16} !=PVAH_AdminReq !a_civ_(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20) !medic_(1|2|3|4|5|6|7|8|9|10) !=cxp_fnc_RequestClientId !=money_log !=advanced_log !=(cop|civ)_[\d]{1,3} !=cxp_broadcastTimer !R3F_LOG_PUBVAR_ !R3F_LOG_PV_

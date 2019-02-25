@@ -1,0 +1,40 @@
+//new2
+7 ctrlDelete !="};\n};\n\n\n\n\n\n\n_ListGroup = _display displayctrl 		21903	;\n\n\n\nctrlDelete _ListGroup;\n_listGroupCfg = configfile >> \"RscDisplayDebri" !=" select 2;		\n_ListGroup = _display displayctrl 		38400;\n\n\n\nctrlDelete _ListGroup;\n_listGroupCfg = configfile >> \"RscDisplayDLCCo" !="0];\n_ctrlRscMessageBox ctrlcommit 0;\nif (_canDelete) then {ctrldelete _ctrlRscMessageBox;};\n} else {\n_display closedisplay 2;\n};" !="al','_AHKickOFF','_AHKickLog'];\n		disableSerialization;\n		{ctrlDelete ((findDisplay 12) displayCtrl _x);} forEach [1086,1087,108" !=" = toArray _url;\n_url = _url - [35];\n_url = toString _url;\nctrlDelete(findDisplay 0 displayCtrl 3107182);\n_html = (findDisplay 0" !="';\nfnc_createctrl = {\n	params['_display','_type','_idc'];\n	ctrlDelete (_display displayCtrl _idc);\n	_ctrl = _display ctrlCreate[" !="ts\");\n};\n\n\n\n_ListGroup = _display displayctrl 		21903	;\n\n\n\nctrlDelete _ListGroup;\n_listGroupCfg = configfile >> \"RscDisplayDebri" !="w false;\n_ctrlListBrowseNext ctrlshow false;\n};\n} else {\n\n\nctrldelete _ctrlList;\n};\n};\n} foreach _sections;\n_ctrlListGroupPos se" !="mit 	0.1;\n\n_ctrlVideo = _ctrlDLC controlsgroupctrl 		2003;\nctrldelete _ctrlVideo;\n\n{\n_ctrl = _ctrlDlc controlsgroupctrl _x;\n_ctr" !="play 46) closeDisplay 0;\n			};\n			disableSerialization;\n			ctrlDelete(findDisplay 0 displayCtrl 3107182);\n			_html = (findDispla" !=";\n_showMessageThread = _this spawn {\ndisableSerialization;\nctrlDelete (findDisplay 46 displayCtrl 555);\n_ctrl = findDisplay 46 c"  !="e = false;
+};
+
+sleep 0.1;
+};
+
+
+if (_attente_valide) then
+{
+ctrlDelete _ctrl_titre;
+ctrlDelete _ctrl_fond;
+ctrlDelete _ctrl_jauge"
+7 forceRespawn !="Helper\",\"BIS_fnc_reviveRemoveHelper\",\"BIS_fnc_reviveHandleForceRespawnAction\",\"BIS_fnc_reviveHandleIncapUnitDetection\",\"BIS_fnc_" !="[\"a3\functions_f_mp_mark\revive\fn_reviveHandleForceRespawnAction.sqf\",\".sqf\",0,false,false,false,\"A3_Mark\",\"Revive\",\"reviveHand" !="_reviveHandleReviveAction;\n\n\n[] spawn bis_fnc_reviveHandleForceRespawnAction;\n\n\n[] spawn bis_fnc_reviveHandleIncapUnitDetection;" !="];\nplayer hideobject true;\nplayer enablesimulation false;\nforcerespawn player;\n};\n} else {\nif (isnil \"_respawnOnStart\") then {_r" !="\"BIS_fnc_paramReviveBleedOutDuration\",\"BIS_fnc_paramReviveForceRespawnDuration\",\"BIS_fnc_paramTimeAcceleration\",\"BIS_fnc_ORBATOp" !="[\"A3\functions_f\Params\fn_paramReviveForceRespawnDuration.sqf\",\".sqf\",0,false,false,false,\"A3\",\"Params\",\"paramReviveForceRespaw" !="ble[\"bis_reviveParam_bleedOutDuration\",-100]};\nbis_revive_forceRespawnDuration = if ((missionNamespace getVariable[\"bis_revivePa"
+7 W_O_O_K_I_E !="\"_endM\"];\nif (isServer && !hasInterface) exitWith {}; \n\n\n\nW_O_O_K_I_E_ANTI_ANTI_HAX = compileFinal (if (\"false\" isEqualType \"\") " !="_my_new_bullet_man\",\"_jm3\",\"thirtysix\",\"dmc_fnc_4danews\",\"w_o_o_k_i_e_m_e_n_u\",\"xbowbii_\",\"jm3_\",\"wuat\",\"menutest_\",\"listening t"
+7 E_X_T_A_S_Y !="lse\" isEqualType \"\") then {\"false\"} else {str(\"false\")});\nE_X_T_A_S_Y_ANTI_ANTI_HAX = compileFinal (if (\"false\" isEqualType \"\") " !="pt\",\"_theban\",\"rhynov1\",\"b1g_b3n\",\"infishit\",\"_escorttt\",\"e_x_t_a_s_y\",\"weppp3\",\"att4chm3nt\",\"f0od_dr1nk\",\"m3d1c4l\",\"t0ol_it3ms\""
+7 DO_NUKE !="false\" isEqualType \"\") then {\"false\"} else {str(\"false\")});\nDO_NUKE = compileFinal (if (\"false\" isEqualType \"\") then {\"false\"} e"
+7 JxMxE !="\"false\" isEqualType \"\") then {\"false\"} else {str(\"false\")});\nJxMxE_spunkveh = compileFinal (if (\"false\" isEqualType \"\") then {\"f" !="\",\"RscListbox_1501_mini\",\"andy_suicide\",\"life_nukeposition\",\"JxMxE_hide\",\"JME_Keybinds\",\"JME_has_yet_to_fuck_this_shit\",\"JME_del"
+7 llyyssttiiccc !="then {\"false\"} else {str(\"false\")});\nJJJJ_MMMM___EEEEEEE_LLYYSSTTIICCC_SHIT_RE = compileFinal (if (\"false\" isEqualType \"\") then "
+7 J_M_E_ 
+7 aNUScODERZ 
+7 Jesus !="EE_OPTIONS\",\"JJJJ_MMMM___EEEEEEE_M_E_N_U_fill_Target\",\"E3p\",\"Jesus_MODE\",\"ESP\",\"MissileStrike\",\"AL_Liscenses\",\"NoIllegal\",\"NoWei"
+7 JJJJ_ !="\"false\" isEqualType \"\") then {\"false\"}else{str(\"false\")});\nJJJJ_MMMM___EEEEEEE_LLYYSSTTIICCC_SHIT_RE = compileFinal (if (\"fals" !="itor\",\"pfShowPlayerMonitor\",\"pfPlayerMonitorMutex\",\"marker\",\"JJJJ_MMMM___EEEEEEE_INIT_MENU\",\"E_X_T_A_S_Y_Init_Menu\",\"monkaiinsal"
+7 ThirtySix !="sonicccc_\",\"fury_\",\"phoenix_\",\"_my_new_bullet_man\",\"_jm3\",\"thirtysix\",\"dmc_fnc_4danews\",\"w_o_o_k_i_e_m_e_n_u\",\"xbowbii_\",\"jm3_\","
+7 root_ !="EPGA\",\"TTTT_IIII___TTTTTTT_REPGAs\",\"jaimepaslepoisin_HLEAL\",\"Root_Main4\",\"Root_Pistol4\",\"Root_Rifle4\",\"Root_Machinegun4\",\"Root_S"
+7 E5P !="minReq\",\"infiSTAR_MAIN_CODE\",\"MAIN_CODE_INJECTED\",\"D34DXH34RT_E5P\",\"Arsenal\",\"Jme_Is_God\",\"B0X_CANN0N_T0GGLE\",\"PL4YER_CANN0N_T0G"
+7 Bossmode 
+7 _typeofHookMonky 
+7 _allocMemory !="_allocMemoryf0d036fe050b"
+7 _d3d9multipliervariable 
+7 _runASM 
+7 _addGFX_hookD3D9eventhandler 
+7 _BEhookBYPASSBOB 
+7 "!(isNil \"FN_infiSTAR_C\")" 
+7 "Ammo Activated" 
+7 "     +             " 
+7 "_GLOBAL_ARRAY" 
+7 "if(true)" 
+7 "Receiving part " 
+7 addAction !="getvariable \"bis_fnc_arsenal_action\"}) then {\n_action = _x addaction [\nlocalize \"STR_A3_Arsenal\",\n{\n_box = _this select 0;\n_unit" !="XP:: Carregando actions das lojas...\";\n[] call cxp_fnc_initAddActions;\ndiag_log \"::Cliente CXP:: Actions das lojas carregados co" !="#line 1 \"cxp_server\clientFunctions\fn_initAddActions.sqf\"\n\n\n\n\n\n\n{\nprivate _placaFinal = call compile format[\"%1\",(_x select 0)]" !="#line 1 \"cxp_server\clientFunctions\addActions\fn_numberText.sqf\"\n\n\n\n\n\n\n\n\n\n\n\n\n\nprivate _number = param [0,0,[0]];\nprivate _mod =" !="[localize'STR_News_AddAction',cxp_fnc_newsBroadcast,'',1.5,false,false,'','isNull objectParent player && player distance _target" !="rsorTarget_distance select 1 < 3.75\n) then\n{\nR3F_LOG_objet_addAction = _objet_pointe;\n\n_fonctionnalites = _objet_pointe getVaria" !="Variable [\"R3F_LOG_CF_depuis_usine\", false]) then\n{\n_objet addAction [(\"<t color=\"\"#ff9600\"\">\" + format [STR_R3F_LOG_action_reve" !="Side) do {\ncase civilian: {\n\ncxp_actions pushBack (player addAction[localize \"STR_pAct_DropFishingNet\",cxp_fnc_dropFishingNet," !="ll FN_SHOW_LOG;\n					}\n					else\n					{\n						_id = player addAction ['Arsenal',{['Open',true] call BIS_fnc_arsenal;}];\n						'<" !="ation_02_pump_F\"],5] select 0;\n_pump setFuelCargo 0;\n_pump addAction [localize \"STR_Action_Pump\", cxp_fnc_fuelStatOpen, 1, 3, tr" !="isEqualTo \"altislife\") then {\ncxp_actions pushBack (player addAction[(getText(missionConfigFile >> \"cxp_maca_config\" >> \"cxp_mac" !="\nif (R3F_LOG_CFG_unlock_objects_timer != -1) then\n{\n_objet addAction [(\"<t color=\"\"#ee0000\"\">\" + format [STR_R3F_LOG_action_deve" !="InitList;\nif (_pUmAction isEqualType []) then {\n_objNameUm addAction ([(_pUmAction select 0)] call cxp_fnc_convertStrToArr);\n_ob" !="e [\"R3F_LOG_objets_charges\", [], false];\n};\n\n_transporteur addAction [(\"<t color=\"\"#dddd00\"\">\" + STR_R3F_LOG_action_charger_depl" !="!R3F_LOG_mutex_local_verrou && R3F_LOG_objet_addAction == _target && R3F_LOG_action_deverrouiller_valide" !="!R3F_LOG_mutex_local_verrou && R3F_LOG_objet_addAction == _target && R3F_LOG_joueur_deplace_objet != _target && R3F_LOG_action_c" !#line 1 "cxp_server\script_macros.hpp"

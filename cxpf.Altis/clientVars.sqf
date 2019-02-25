@@ -1,0 +1,104 @@
+/*
+	File: clientVars.sqf
+	Author: Casperento
+	Description:
+	Inicializa variaveis do cliente
+*/
+cxp_query_time = time;
+cxp_action_delay = time;
+cxp_trunk_vehicle = objNull;
+cxp_session_completed = false;
+cxp_garage_store = false;
+cxp_session_tries = 0;
+cxp_net_dropped = false;
+cxp_siren_active = false;
+cxp_siren2_active = false;
+cxp_clothing_filter = 0;
+cxp_clothing_uniform = -1;
+cxp_redgull_effect = time;
+cxp_is_processing = false;
+cxp_bail_paid = false;
+cxp_impound_inuse = false;
+cxp_action_inUse = false;
+cxp_spikestrip = objNull;
+cxp_knockout = false;
+cxp_interrupted = false;
+cxp_respawned = false;
+cxp_removeWanted = false;
+cxp_action_gathering = false;
+cxp_save_gear = [];
+cxp_container_activeObj = objNull;
+cxp_disable_getIn = false;
+cxp_disable_getOut = false;
+cxp_civ_position = [];
+cxp_canpay_bail = true;
+cxp_storagePlacing = scriptNull;
+cxp_safezone = false;
+cxp_seatbelt = false;
+cxp_isSuiciding = false;
+cxp_old_group = grpNull;
+cxp_usingDroga = false;
+cxp_houselocked = true;
+cxp_cooking = false;
+cxp_fire = false;
+cxp_sitting = false;
+cxp_barracas_limite = 0;
+cxp_hwSpeed = (getNumber(missionConfigFile >> "CxpBasic_Settings" >> "veloc_estrada"));
+cxp_citySpeed = (getNumber(missionConfigFile >> "CxpBasic_Settings" >> "veloc_cidade"));
+cxp_pickup_open = false;
+cxp_pickup_item_array = [];
+cxp_escorting = false;
+cxp_actions = [];
+cxp_deadClient_Atendido = [false,objNull];
+cxp_isSuicide = false;
+cxp_sec_salario = false;
+cxp_skull = objNull;
+cxp_bt_timer = 0;
+cxp_bounty_contract = [];
+cxp_bounty_uid = [];
+cxp_bounty_tracked = -500;
+cxp_last_bounty = 0;
+cxp_track_radius = (getNumber(missionConfigFile >> "CxpBasic_Settings" >> "bCFG_raio_track"));
+cxp_isBorrachado = false;
+cxp_transact_bounty = false;
+cxp_bountyList_client = [];
+cxp_concordDiscord = false;
+cxp_assaltando_posto = false;
+cxp_assaltando_banco = false;
+cxp_insideAgencia = false;
+contadorAntiCheat = 0;
+varAntidupe = false;
+varAntiShopDupe = false;
+cxp_virtextinv_open = false;
+cxp_settings_enableNewsBroadcast = profileNamespace getVariable ["cxp_enableNewsBroadcast",true];
+cxp_settings_enableSidechannel = profileNamespace getVariable ["cxp_enableSidechannel",true];
+cxp_settings_tagson = profileNamespace getVariable ["cxp_settings_tagson",true];
+cxp_settings_revealObjects = profileNamespace getVariable ["cxp_settings_revealObjects",true];
+cxp_settings_viewDistanceFoot = profileNamespace getVariable ["cxp_viewDistanceFoot",1000];
+cxp_settings_viewDistanceCar = profileNamespace getVariable ["cxp_viewDistanceCar",1000];
+cxp_settings_viewDistanceAir = profileNamespace getVariable ["cxp_viewDistanceAir",1000];
+cxp_clothing_purchase = [-1,-1,-1,-1,-1];
+cxp_maxWeight = (getNumber(missionConfigFile >> "CxpBasic_Settings" >> "total_maxWeight"));
+cxp_carryWeight = 0; //Deve sempre ser 0
+cxp_net_dropped = false;
+cxp_use_atm = true;
+cxp_is_arrested = false;
+cxp_is_alive = false;
+cxp_delivery_in_progress = false;
+cxp_thirst = 100;
+cxp_hunger = 100;
+cxp_drink = 0;
+cxp_cigar_uses = 0;
+cxp_count_gestos = 0;
+cxp_istazed = false;
+cxp_isknocked = false;
+cxp_vehicles = [];
+missionNamespace setVariable [missionNamespace getVariable ["cxp_cashMaoo",""],0];
+{
+    missionNamespace setVariable [format["cxp_inv_%1",(getText(missionConfigFile >> "VirtualItems" >> (configName _x) >> "variable"))],0];
+} forEach ("true" configClasses (missionConfigFile >> "VirtualItems"));
+{
+    private _varName = getText(_x >> "variable");
+    private _sideFlag = getText(_x >> "side");
+    missionNamespace setVariable [format["license_%1_%2",_sideFlag,(getText(missionConfigFile >> "Licenses" >> _varName >> "variable"))],false];
+} forEach ("true" configClasses (missionConfigFile >> "Licenses"));
