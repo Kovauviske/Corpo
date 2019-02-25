@@ -487,7 +487,7 @@ class CxpBasic_Settings {
     "<br/><br/><img shadown='false' size='6' image='textures\interface\jB.paa'/><br/><br/>Quer ajudar o servidor a permanecer online ? Entre em contato com o suporte agora mesmo em nosso TS:<br/> <t color='#6fff00' size='1.5'>ts3.supremelife.com.br</t>"
   };
   cxp_autoMessages_delay = 600; // Tempo em segundos de diferenca entre cada mensagem (padrao 10min=600segundos)
-  cxp_wlc_tits[] = {{"Administradores","Smoke@xiu e Curcio","#ff0000","#ffffff"},{"Desenvolvedor","Casperento","#ff0000","#ffffff"}}; // ["Titulo","Subtitulo","corDoTituloEmHex","corDoSubTitEmHex"]
+  cxp_wlc_tits[] = {{"Administradores","Smoke@xiu e Curcio","#ff0000","#ffffff"},{"Desenvolvedor","Kovauviske","#ff0000","#ffffff"}}; // ["Titulo","Subtitulo","corDoTituloEmHex","corDoSubTitEmHex"]
   cxp_wlc_dur = 7; // Tempo de duracao de cada um dos creditos de entrada
   cxp_wlc_fades = 1; // Tempo de fadeIn e fadeOut de cada texto dos creditos de entrada
   cxp_gestos_limit = 5; // Quantas vezes o imbecil pode usar os gestos do F1,F2,F3,etc com audio
