@@ -1,42 +1,33 @@
-class DifficultyPresets {
-	class CustomDifficulty {
-		displayName = $STR_Difficulty_Custom;	    //Name of the difficulty preset.
-		description = "Opções customizadas carregadas para o jogador.";
-		levelAI = "AILevelHigh";
-        //All options of the Custom preset are set by the engine. The values in config
-		class Options {
-			// Simulation
-			reducedDamage = 0;    // Reduced damage (0 = disabled, 1 = enabled)
- 
-			// Situational awareness
-			groupIndicators = 2;      // Group indicators   (0 = never, 1 = limited distance, 2 = always)
-			friendlyTags = 0;         // Friendly name tags (0 = never, 1 = limited distance, 2 = always)
-			enemyTags = 0;            // Enemy name tags    (0 = never, 1 = limited distance, 2 = always)
-			detectedMines = 0;        // Detected mines     (0 = never, 1 = limited distance, 2 = always)
-			commands = 0;             // Commands           (0 = never, 1 = fade out, 2 = always)
-			waypoints = 2;            // Waypoints          (0 = never, 1 = fade out, 2 = always)
-			tacticalPing = 0;		// Mostrar Ping-Tatico (nunca usei isso) (0 = disable, 1 = enable)
- 
-			// Personal awareness
-			weaponInfo = 2;           // Weapon info        (0 = never, 1 = fade out, 2 = always)
-			stanceIndicator = 2;      // Stance indicator   (0 = never, 1 = fade out, 2 = always)
-			staminaBar = 0;       // Stamina bar (0 = disabled, 1 = enabled)
-			weaponCrosshair = 1;  // Weapon crosshair (0 = disabled, 1 = enabled)
-			visionAid = 0;        // Vision aid (0 = disabled, 1 = enabled)
- 
-			// View
-			thirdPersonView = 1;  // 3rd person view (0 = disabled, 1 = enabled)
-			cameraShake = 1;      // Camera shake (0 = disabled, 1 = enabled)
- 
-			// Multiplayer
-			scoreTable = 0;       // Score table (0 = disabled, 1 = enabled)
-			deathMessages = 0;    // Killed by (0 = disabled, 1 = enabled)
-			vonID = 1;            // VON ID (0 = disabled, 1 = enabled)
- 
-			// Misc
-			mapContent = 0;       // Extended map content (0 = disabled, 1 = enabled)
-			autoReport = 0;       // Automatic reporting (0 = disabled, 1 = enabled)
-			multipleSaves = 0;    // Multiple saves (0 = disabled, 1 = enabled)
+class DifficultyPresets
+{
+	class CustomDifficulty
+	{
+		displayName="$STR_Difficulty_Custom";
+		description="Opções customizadas carregadas para o jogador.";
+		levelAI="AILevelHigh";
+		class Options
+		{
+			reducedDamage=0;
+			groupIndicators=2;
+			friendlyTags=0;
+			enemyTags=0;
+			detectedMines=0;
+			commands=0;
+			waypoints=2;
+			tacticalPing=0;
+			weaponInfo=2;
+			stanceIndicator=2;
+			staminaBar=0;
+			weaponCrosshair=1;
+			visionAid=0;
+			thirdPersonView=1;
+			cameraShake=1;
+			scoreTable=0;
+			deathMessages=0;
+			vonID=1;
+			mapContent=0;
+			autoReport=0;
+			multipleSaves=0;
 		};
 	};
 };
