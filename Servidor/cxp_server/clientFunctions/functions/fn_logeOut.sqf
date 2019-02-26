@@ -17,7 +17,7 @@ sleep 1;
 sleep 0.25;
 
 // final info
-[format["<t size='1.3' color='#FF0000'>Supreme Life</t><br/>Volte sempre %1.<br/>Agradecemos pela sua presença.<br/><t size='1.2' color='#ffffff'>Chame seus amigos para jogar com gente!</t><br/><t size='1.1' color='#15ff00'>Não se preocupe, seus dados foram sincronizados com sucesso!</t>",name player],0,0.1,8,0,0,8] spawn BIS_fnc_dynamicText;
+[format["<t size='1.3' color='#FF0000'>SAMPA LIFE BRASIL</t><br/>Volte sempre %1.<br/>Agradecemos pela sua presença.<br/><t size='1.2' color='#ffffff'>Chame seus amigos para jogar com gente!</t><br/><t size='1.1' color='#15ff00'>Não se preocupe, seus dados foram sincronizados com sucesso!</t>",name player],0,0.1,8,0,0,8] spawn BIS_fnc_dynamicText;
 sleep 8;
 
 // Removendo por completo da lista do samu
