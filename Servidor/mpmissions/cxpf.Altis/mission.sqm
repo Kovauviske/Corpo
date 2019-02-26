@@ -46203,7 +46203,7 @@ class Mission
 			dataType="Marker";
 			position[]={15405.155,0,15941.621};
 			name="marker_681";
-			text="Policia Supreme Life";
+			text="Batalhão de Policia";
 			type="mil_flag";
 			id=15602;
 			atlOffset=-4.6042972;
@@ -46213,7 +46213,7 @@ class Mission
 			dataType="Marker";
 			position[]={14962.518,0,17207.67};
 			name="marker_682";
-			text="SupremeMed / Hospital";
+			text="Samu / Hospital";
 			type="loc_Hospital";
 			colorName="ColorWhite";
 			id=15784;
@@ -47046,7 +47046,7 @@ class Mission
 			dataType="Marker";
 			position[]={25586.66,16.931999,21384.32};
 			name="marker_683";
-			text="SupremeMed / Hospital";
+			text="Samu / Hospital";
 			type="loc_Hospital";
 			colorName="ColorWhite";
 			id=16025;
@@ -50140,7 +50140,7 @@ class Mission
 			dataType="Marker";
 			position[]={3762.4519,10.85,12990.08};
 			name="marker_690";
-			text="SupremeMed / Hospital";
+			text="Samu / Hospital";
 			type="n_med";
 			colorName="ColorWhite";
 			id=16460;
