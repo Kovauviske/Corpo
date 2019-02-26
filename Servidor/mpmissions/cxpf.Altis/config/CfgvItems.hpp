@@ -809,7 +809,7 @@ class VirtualItems {
         variable = "heroinProcessed";
         displayName = "STR_Item_HeroinP";
         weight = 5;
-        buyPrice = 12000;
+        buyPrice = -1;
         sellPrice = 8000;
         varPrice = 1;
         maxPrice = 11000;
@@ -840,7 +840,7 @@ class VirtualItems {
         variable = "marijuana";
         displayName = "STR_Item_Marijuana";
         weight = 3;
-        buyPrice = 8000;
+        buyPrice = -1;
         sellPrice = 4000;
         varPrice = 1;
         maxPrice = 6000;
@@ -886,7 +886,7 @@ class VirtualItems {
         variable = "cocaineProcessed";
         displayName = "STR_Item_CocaineP";
         weight = 4;
-        buyPrice = 9000;
+        buyPrice = -1;
         sellPrice = 6000;
         varPrice = 1;
         maxPrice = 8000;
@@ -917,7 +917,7 @@ class VirtualItems {
         variable = "methp";
         displayName = "STR_Item_Methp";
         weight = 7;
-        buyPrice = 15000;
+        buyPrice = -1;
         sellPrice = 10000;
         varPrice = 1;
         maxPrice = 14500;
