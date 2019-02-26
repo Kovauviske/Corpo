@@ -328,23 +328,7 @@ class Clothing {
             { "U_I_C_Soldier_Para_1_F", "", 19000, "" },
             { "U_I_C_Soldier_Para_2_F", "", 19000, "" },
             { "U_I_C_Soldier_Para_3_F", "", 19000, "" },
-            { "U_I_C_Soldier_Para_4_F", "", 19000, "" },
-            { "U_B_GhillieSuit", "", 25000, "" },
-            { "U_O_GhillieSuit", "", 25000, "" },
-            { "U_I_GhillieSuit", "", 25000, "" },
-            { "U_B_T_Sniper_F", "", 28000, "" },
-            { "U_O_T_Sniper_F", "", 28000, "" },
-            { "U_B_FullGhillie_lsh", "", 50000, "" },
-            { "U_B_FullGhillie_sard", "", 50000, "" },
-            { "U_B_FullGhillie_ard", "", 50000, "" },
-            { "U_O_FullGhillie_lsh", "", 50000, "" },
-            { "U_O_FullGhillie_sard", "", 50000, "" },
-            { "U_O_FullGhillie_ard", "", 50000, "" },
-            { "U_I_FullGhillie_lsh", "", 50000, "" },
-            { "U_I_FullGhillie_sard", "", 50000, "" },
-            { "U_B_T_FullGhillie_tna_F", "", 50000, "" },
-            { "U_O_T_FullGhillie_tna_F", "", 50000, "" },
-            { "U_I_FullGhillie_ard", "", 50000, "" }
+            { "U_I_C_Soldier_Para_4_F", "", 19000, "" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
@@ -493,22 +477,8 @@ class Clothing {
             { "U_I_C_Soldier_Para_2_F", "", 19000, "" },
             { "U_I_C_Soldier_Para_3_F", "", 19000, "" },
             { "U_I_C_Soldier_Para_4_F", "", 19000, "" },
-            { "U_B_GhillieSuit", "", 25000, "" },
-            { "U_O_GhillieSuit", "", 25000, "" },
-            { "U_I_GhillieSuit", "", 25000, "" },
             { "U_B_T_Sniper_F", "", 28000, "" },
-            { "U_O_T_Sniper_F", "", 28000, "" },
-            { "U_B_FullGhillie_lsh", "", 50000, "" },
-            { "U_B_FullGhillie_sard", "", 50000, "" },
-            { "U_B_FullGhillie_ard", "", 50000, "" },
-            { "U_O_FullGhillie_lsh", "", 50000, "" },
-            { "U_O_FullGhillie_sard", "", 50000, "" },
-            { "U_O_FullGhillie_ard", "", 50000, "" },
-            { "U_I_FullGhillie_lsh", "", 50000, "" },
-            { "U_I_FullGhillie_sard", "", 50000, "" },
-            { "U_B_T_FullGhillie_tna_F", "", 50000, "" },
-            { "U_O_T_FullGhillie_tna_F", "", 50000, "" },
-            { "U_I_FullGhillie_ard", "", 50000, "" }
+            { "U_O_T_Sniper_F", "", 28000, "" }
         };
         headgear[] =
         {
