@@ -248,7 +248,7 @@ class CxpBasic_Settings {
   respawn_timer_medOFF = -1; // Tempo em segundos(dentro do jogo em minutos) que o player deve esperar para renascer, sem ter medicos online [PADRAO: 240seg=4min]
 
   /* Channel 7 News Station Configurations */
-  news_broadcast_cost = 100000; //Cost for a player to send a news station broadcast.
+  news_broadcast_cost = 200000; //Cost for a player to send a news station broadcast.
   news_broadcast_cooldown = 30; //Time in minutes that is required between news station broadcasts. (Default = 20 minutes)
   news_broadcast_header_length = 512; //Number of characters that a header can consist of. Anything over this may clip. This depends on the font size and various other factors. Adjust with caution.
 
@@ -269,8 +269,8 @@ class CxpBasic_Settings {
   fuelCan_refuel = 100; //Cost to refuel an empty fuel canister at the fuel station pumps. (Be wary of your buy/sell prices on fuel cans to prevent exploits...)
 
   /* Gang System Configurations */
-  gang_price = 300000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
-  gang_upgradeBase = 50000; //The base cost for purchasing additional slots in a gang
+  gang_price = 70000; //Gang creation price. --Remember they are persistent so keep it reasonable to avoid millions of gangs.
+  gang_upgradeBase = 10000; //The base cost for purchasing additional slots in a gang
   gang_upgradeMultiplier = 2.5; //CURRENTLY NOT IN USE
   gang_memberLimit = 50; // Limite de membros que uma gang pode ter (By Casperento)
 
@@ -310,7 +310,7 @@ class CxpBasic_Settings {
 
   /* Paycheck & Bank System Configurations */
   bank_cop = 80000; //Quantia inicial de dinheiro no banco para novo COP
-  bank_civ = 250000; //Quantia inicial de dinheiro no banco para novo CIV
+  bank_civ = 10000; //Quantia inicial de dinheiro no banco para novo CIV
   bank_med = 80000; //Quantia inicial de dinheiro no banco para novo MED
 
   /* Config. Customizada para TAGS -> Casperento */
@@ -536,7 +536,7 @@ class CxpBasic_Settings {
         }
       };
   */
-  avisos_tab_distancia = 500; // Distancia máxima que um alvo pode estar distante de um player anunciante (em metros) -- A AREA DE PVP GERADA PELO TAB SERA 4x MAIOR QUE ESSA DISTANCIA
+  avisos_tab_distancia = 100; // Distancia máxima que um alvo pode estar distante de um player anunciante (em metros) -- A AREA DE PVP GERADA PELO TAB SERA 4x MAIOR QUE ESSA DISTANCIA
   avisos_tab_tempoTgg = 180; // Tempo em segundos pro marcador da area de pvp TAB ficar "online" pra avisar os imbecis ao redor
   avisos_tab_cfg[] = {
     // CIVILIAN
@@ -626,8 +626,8 @@ class CxpBasic_Settings {
   parcela_cartel_multi = .1;// .1 ou 0.1 = 10% de desconto do farm de todo mundo na hora da venda para o traficante (drogas)
 
   /* Radares de velocidade -> Casperento */
-  veloc_estrada = 130; // Velocidade permitida em radares de estrada
-  veloc_cidade = 110; // Velocidade permitida em radares de cidades (safe)
+  veloc_estrada = 100; // Velocidade permitida em radares de estrada
+  veloc_cidade = 40; // Velocidade permitida em radares de cidades (safe)
   valor_multa = 3000; //preço a ser descontado se o player levar multa por excesso de veloc. (com licença de motorista)
   valor_multa_smot = 4000; //preço a ser descontado se o player levar multa por excesso de veloc. (sem licença de motorista)
 
@@ -793,7 +793,7 @@ class CxpBasic_Settings {
 		"optic_AMS_snd",
 		"bipod_01_F_blk"
 	};
-  medico_imortal = true; // True: medico nao morre, False: medico morre -- MAS MORRERA DE FOME OU DE SEDE DE TODO JEITO!!!
+  medico_imortal = false; // True: medico nao morre, False: medico morre -- MAS MORRERA DE FOME OU DE SEDE DE TODO JEITO!!!
   multa_autom_samu = 5000; // Valor da multa automatica enviada para o player que fugir do samu
   samu_bote = "C_Rubberboat"; // Classname do bote que sera spawnado para ser o bote salva-vidas
   heli_samu_bote[] = { // Helicopteros capazes de dropar o bote salva-vidas
@@ -805,8 +805,8 @@ class CxpBasic_Settings {
   deadList_raioMultiDead = 100; // Raio de alcance, em metros, da circunferencia que sera marcada na area que contiver mais de 1 morto proximo ao outro (ambos serao removidos da lista de mortos para que outros medicos nao escolham os mesmos pacientes)
 
   /* Script de assaltos -> Casperento */
-  premio_assalto_posto = 150000; // preco granho ao assaltar um posto (PREÇO FIXO)
-  minCopOn_assalto_posto = 2; // Numero de cops minimo para assaltar um posto
+  premio_assalto_posto = 70000; // preco granho ao assaltar um posto (PREÇO FIXO)
+  minCopOn_assalto_posto = 3; // Numero de cops minimo para assaltar um posto
   tempoVoltarNpc_assalto_posto = 300; // Tempo em seg. para voltar as ações normais do npc do posto, para assaltar novamente (PADRAO: 300seg = 5min)
 
   premio_assalto_banco = 300000; // preco granho ao assaltar uma AGENCIA (PREÇO FIXO)
@@ -923,7 +923,7 @@ class CxpBasic_Settings {
   vehicle_retrieval_multiplier_typeLis = .05;
 
   /* Apreender veículo COP/SAMU */
-  vehicle_cop_impound_price = 10000; // quantia que o policial ganha ao apreender um veiculo
+  vehicle_cop_impound_price = 15000; // quantia que o policial ganha ao apreender um veiculo
   vehicle_med_impound_price = 5000; // quantia que o medico ganha ao apreender um veiculo
 
   disableCommanderView = true; //false - Group leaders can access the commander view. true [default] - Group leaders cannot access the commander view.
