@@ -235,7 +235,7 @@ class CxpBasic_Settings {
 /* System Settings */
   /* ATM & Federal Reserve System Configurations */
   noatm_timer = 15; //Time in minutes that players cannot deposit money after selling stolen gold.
-  minimum_cops = 10; //Minimum cops required online to rob the Federal Reserve
+  minimum_cops = 0; //Minimum cops required online to rob the Federal Reserve
 
   /* Death settings */
   // Procure por '<Package name="DeathCustomMsgs">' no arquivo 'stringtable.xml' para customizar as msgs
@@ -244,7 +244,7 @@ class CxpBasic_Settings {
   /* Basic System Configurations */
   enable_fatigue = false; //Set to false to disable the ARMA 3 fatigue system.
   total_maxWeight = 24; //Static variable for the maximum weight allowed without having a backpack
-  respawn_timer = 300; // Tempo em segundos(dentro do jogo em minutos) que o player deve esperar para renascer, quando ha medicos online [PADRAO: 360seg=6min]
+  respawn_timer = 120; // Tempo em segundos(dentro do jogo em minutos) que o player deve esperar para renascer, quando ha medicos online [PADRAO: 360seg=6min]
   respawn_timer_medOFF = -1; // Tempo em segundos(dentro do jogo em minutos) que o player deve esperar para renascer, sem ter medicos online [PADRAO: 240seg=4min]
 
   /* Channel 7 News Station Configurations */
@@ -482,12 +482,12 @@ class CxpBasic_Settings {
   atirar_safe_procurado = false; // Se atirar dentro de safe vai pra lista de procurado com Homicidio Involuntario (True: Liga; False: Desliga; Bounty Hunter nao sera adicionado)
   parachuteEspecial_minAltura = 100; // Altura minima para poder usar o para-quedas (em metros, obviamente)
   cxp_autoMessages[] = { // Mensagens automaticas a serem mostradas ao jogador
-    "<br/><br/><img shadown='false' size='6' image='textures\interface\jB.paa'/><br/><br/>Doe qualquer quantia e ajude o servidor a permanecer online. Acesse nosso TS para mais informações:<br/> <t color='#ff00e7' size='1.5'>ts3.supremelife.com.br</t>",
-    "<br/><br/><img shadown='false' size='6' image='textures\interface\tsl.paa'/><br/><br/>Precisa de se comunicar com seus amigos ? Entre em nosso TS:<br/> <t color='#00ffec' size='1.5'>ts3.supremelife.com.br</t>",
-    "<br/><br/><img shadown='false' size='6' image='textures\interface\jB.paa'/><br/><br/>Quer ajudar o servidor a permanecer online ? Entre em contato com o suporte agora mesmo em nosso TS:<br/> <t color='#6fff00' size='1.5'>ts3.supremelife.com.br</t>"
+    "<br/><br/><img shadown='false' size='6' image='textures\interface\jB.paa'/><br/><br/>Doe qualquer quantia e ajude o servidor a permanecer online. Acesse nosso TS para mais informações:<br/> <t color='#ff00e7' size='1.5'>54.39.85.61:9120</t>",
+    "<br/><br/><img shadown='false' size='6' image='textures\interface\tsl.paa'/><br/><br/>Precisa de se comunicar com seus amigos ? Entre em nosso TS:<br/> <t color='#00ffec' size='1.5'>54.39.85.61:9120</t>",
+    "<br/><br/><img shadown='false' size='6' image='textures\interface\jB.paa'/><br/><br/>Quer ajudar o servidor a permanecer online ? Entre em contato com o suporte agora mesmo em nosso TS:<br/> <t color='#6fff00' size='1.5'>54.39.85.61:9120</t>"
   };
   cxp_autoMessages_delay = 600; // Tempo em segundos de diferenca entre cada mensagem (padrao 10min=600segundos)
-  cxp_wlc_tits[] = {{"Administradores","Smoke@xiu e Curcio","#ff0000","#ffffff"},{"Desenvolvedor","Kovauviske","#ff0000","#ffffff"}}; // ["Titulo","Subtitulo","corDoTituloEmHex","corDoSubTitEmHex"]
+  cxp_wlc_tits[] = {{"Administradores","Julio","#ff0000","#ffffff"},{"Desenvolvedor","Kovauviske","#ff0000","#ffffff"}}; // ["Titulo","Subtitulo","corDoTituloEmHex","corDoSubTitEmHex"]
   cxp_wlc_dur = 7; // Tempo de duracao de cada um dos creditos de entrada
   cxp_wlc_fades = 1; // Tempo de fadeIn e fadeOut de cada texto dos creditos de entrada
   cxp_gestos_limit = 5; // Quantas vezes o imbecil pode usar os gestos do F1,F2,F3,etc com audio
@@ -806,11 +806,11 @@ class CxpBasic_Settings {
 
   /* Script de assaltos -> Casperento */
   premio_assalto_posto = 70000; // preco granho ao assaltar um posto (PREÇO FIXO)
-  minCopOn_assalto_posto = 3; // Numero de cops minimo para assaltar um posto
+  minCopOn_assalto_posto = 0; // Numero de cops minimo para assaltar um posto
   tempoVoltarNpc_assalto_posto = 300; // Tempo em seg. para voltar as ações normais do npc do posto, para assaltar novamente (PADRAO: 300seg = 5min)
 
   premio_assalto_banco = 300000; // preco granho ao assaltar uma AGENCIA (PREÇO FIXO)
-  minCopOn_assalto_banco = 3; // Numero de cops minimo para assaltar uma AGENCIA
+  minCopOn_assalto_banco = 0; // Numero de cops minimo para assaltar uma AGENCIA
   tempoVoltarNpc_assalto_banco = 2400; // Tempo em seg. para poder assaltar determinada AGENCIA novamente (PADRAO: 300seg = 5min)
 
   /* Menu Prefeitura -> Casperento */
