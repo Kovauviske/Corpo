@@ -187,8 +187,9 @@ class WeaponShops {
             { "NVGoggles", "", 2000, -1, "" },
             { "HandGrenade_Stone", $STR_W_items_Flashbang, 850, -1, "" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 1000, -1, "" },
-            { "arifle_SDAR_F", $STR_W_items_TaserRifle, 10000, -1, "" },
-            { "hgun_P07_F", "", 7500, -1, "" },
+            { "hgun_PDW2000_F", "", 5000, -1, "" }, //Apex DLC
+			{ "SMG_02_F", "", 7500', -1, "" },
+            { "SMG_01_F", "", 10000', -1, "" },
             { "hgun_P07_khk_F", "", 7500, -1, "" }, //Apex DLC
             { "hgun_Pistol_heavy_01_F", "", 9500, -1, "call cxp_coplevel >= 1" },
             { "SMG_02_ACO_F", "", 30000, -1, "call cxp_coplevel >= 2" },
