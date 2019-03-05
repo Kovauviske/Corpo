@@ -18,8 +18,8 @@
             <Portuguese>Terminando o processo de configuração do cliente...</Portuguese>
         </Key>
         <Key ID="STR_Init_Welcome">
-            <Original>Seja bem-vindo ao servidor Supreme Life. Trabalhamos duro para trazer um novo modo de jogo para a comunidade brasileira de Life.Lembre-se: siga as regras e respeite o roleplay!</Original>
-            <Portuguese>Seja bem-vindo ao servidor Supreme Life. Trabalhamos duro para trazer um novo modo de jogo para a comunidade brasileira de Life.Lembre-se: siga as regras e respeite o roleplay!</Portuguese>
+            <Original>Seja bem-vindo ao servidor Sampa Life Brasil. Lembre-se: siga as regras e respeite o roleplay!</Original>
+            <Portuguese>Seja bem-vindo ao servidor Sampa Life Brasil.Lembre-se: siga as regras e respeite o roleplay!</Portuguese>
         </Key>
     </Package>
     <Package name="HUD">
@@ -42,8 +42,8 @@
     </Package>
 	<Package name="MenuEntrada_Termos">
         <Key ID="STR_Men_Ent_Titulo">
-            <Original>Supreme Life</Original>
-            <Portuguese>Supreme Life</Portuguese>
+            <Original>Sampa Life Brasil</Original>
+            <Portuguese>Sampa Life Brasil</Portuguese>
         </Key>
         <Key ID="STR_Men_Ent_SubTitulo1">
             <Original>Ao entrar em nosso servidor, você concorda com as seguintes regras:</Original>
@@ -136,7 +136,7 @@
             <Original>Digite o que ocorreu com você:</Original>
         </Key>
         <Key ID="STR_CXPBT_Credits">
-            <Original>SITE: www.supremelife.com.br - TS3: ts3.supremelife.com.br - FACE: facebook.com/supremelifea3</Original>
+            <Original>SITE: www.sampalifebrasil.com.br - TS3: 54.39.85.61:9120 - FACE: facebook.com/sampalife</Original>
         </Key>
         <Key ID="STR_CXPBT_Description">
             <Original>Ajude-nos a resolver os problemas do servidor, reportando bugs, e ganhe XP no jogo para subir de nivel!</Original>
@@ -4058,12 +4058,12 @@
             <Polish>Pojazd nie posiada takiej ilości rzeczy.</Polish>
         </Key>
         <Key ID="STR_MISC_overviewText">
-            <Original>Entre em nosso TS : ts3.supremelife.com.br</Original>
-            <Portuguese>Entre em nosso TS : ts3.supremelife.com.br</Portuguese>
+            <Original>Entre em nosso TS : 54.39.85.61:9120</Original>
+            <Portuguese>Entre em nosso TS : 54.39.85.61:9120</Portuguese>
         </Key>
         <Key ID="STR_MISC_onLoadMission">
-            <Original>Seja Bem-Vindo ao servidor Supreme Life. Nosso TS : ts3.supremelife.com.br</Original>
-            <Portuguese>Seja Bem-Vindo ao servidor Supreme Life. Nosso TS : ts3.supremelife.com.br</Portuguese>
+            <Original>Seja Bem-Vindo ao servidor Sampa Life Brasil. Nosso TS : 54.39.85.61:9120</Original>
+            <Portuguese>Seja Bem-Vindo ao servidor Sampa Life Brasil. Nosso TS : 54.39.85.61:9120</Portuguese>
         </Key>
     </Package>
     <Package name="Housing_Strings">
@@ -6706,12 +6706,12 @@
             <Portuguese>Acesse nosso site para conhecer nosso SV : siteServidor.com.br</Portuguese>
         </Key>
         <Key ID="STR_MAR_Info2">
-            <Original>Acesse nosso teamspeak para se comunicar com outros jogadores : ts3.supremelife.com.br</Original>
-            <Portuguese>Acesse nosso teamspeak para se comunicar com outros jogadores : ts3.supremelife.com.br</Portuguese>
+            <Original>Acesse nosso teamspeak para se comunicar com outros jogadores : 54.39.85.61:9120</Original>
+            <Portuguese>Acesse nosso teamspeak para se comunicar com outros jogadores : 54.39.85.61:9120</Portuguese>
         </Key>
         <Key ID="STR_MAR_Info3">
-            <Original>Seja bem-vindo ao servidor Supreme Life !</Original>
-            <Portuguese>Seja bem-vindo ao servidor Supreme Life !</Portuguese>
+            <Original>Seja bem-vindo ao servidor Sampa Life Brasil !</Original>
+            <Portuguese>Seja bem-vindo ao servidor Sampa Life Brasil !</Portuguese>
         </Key>
         <Key ID="STR_MAR_MNegro">
             <Original>Mercado Negro de Armas</Original>
@@ -7626,8 +7626,8 @@
             <Portuguese>Você foi banido deste servidor.</Portuguese>
         </Key>
         <Key ID="STR_Banido_Descript">
-            <Original>No dia que você aprender a jogar de verdade e respeitar os outros jogadores, você será bem-vindo novamente ! Foi algum caso injusto ? Entre em nosso TS: ts3.supremelife.com.br, e entre em contato com a administração !</Original>
-            <Portuguese>No dia que você aprender a jogar de verdade e respeitar os outros jogadores, você será bem-vindo novamente ! Foi algum caso injusto ? Entre em nosso TS: ts3.supremelife.com.br, e entre em contato com a administração !</Portuguese>
+            <Original>No dia que você aprender a jogar de verdade e respeitar os outros jogadores, você será bem-vindo novamente ! Foi algum caso injusto ? Entre em nosso TS: 54.39.85.61:9120, e entre em contato com a administração !</Original>
+            <Portuguese>No dia que você aprender a jogar de verdade e respeitar os outros jogadores, você será bem-vindo novamente ! Foi algum caso injusto ? Entre em nosso TS: 54.39.85.61:9120, e entre em contato com a administração !</Portuguese>
         </Key>
     </Package>
     <Package name="TextNotifications">
