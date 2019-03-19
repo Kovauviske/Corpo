@@ -111,10 +111,10 @@ class Clothing {
             { "U_Rangemaster", "Uniforme Recruta", 6000, "call cxp_coplevel == 2" }, //Policia Militar - Recruta
             { "U_BG_Guerrilla_6_1", "Uniforme Aguia", 15000, "call cxp_coplevel >= 3" }, //Policia Militar - Recruta
 		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 5000 "call cxp_coplevel == 3" }, //Policia Militar - Soldado
-		 	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4500, "call cxp_coplevel == 4" }, //Policia Militar - Cabo
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4000, "call cxp_coplevel == 6" }, //Policia Militar - 3ª Sargento
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3500, "call cxp_coplevel == 7" }, //Policia Militar - 2ª Sargento
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3000, "call cxp_coplevel == 8" }, //Policia Militar - 1ª Sargento
+		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4500, "call cxp_coplevel == 4" }, //Policia Militar - Cabo
+			      { "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4000, "call cxp_coplevel == 6" }, //Policia Militar - 3ª Sargento
+		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3500, "call cxp_coplevel == 7" }, //Policia Militar - 2ª Sargento
+			      { "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3000, "call cxp_coplevel == 8" }, //Policia Militar - 1ª Sargento
 			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 2500, "call cxp_coplevel == 9" }, //Policia Militar - SubTenente
 			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
@@ -569,9 +569,10 @@ class Clothing {
         side = "med";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_B_Wetsuit", "Mergulhador", 100, "call cxp_mediclevel >= 1" },
-            { "U_I_HeliPilotCoveralls", "Resgate", 300, "call cxp_mediclevel >= 1" },
-            { "U_I_pilotCoveralls", "Comandante", 500, "call cxp_mediclevel >= 8" }
+            { "U_Competitor", "Uniforme Recruta", 5000, "call cxp_mediclevel >= 1" },
+            { "U_l_CombatUniform", "Uniforme Resgate", 10000, "call cxp_mediclevel >= 1" },
+            { "U_B_HeliPilotCoveralls", "Uniforme Piloto", 20000, "call cxp_mediclevel >= 3" },
+            { "U_O_CombatUniform_ocamo", "Uniforme Incendio", 50000, "call cxp_mediclevel >= 5" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },

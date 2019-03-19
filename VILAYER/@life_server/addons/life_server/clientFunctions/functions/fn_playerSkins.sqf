@@ -45,14 +45,20 @@ switch (playerSide) do {
 
     case independent: {
       // roupas resgate
-      if (uniform player isEqualTo "U_B_Wetsuit" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
-        player setObjectTextureGlobal [0, "textures\resgate\cloth\diver.jpg"];
+      if (uniform player isEqualTo "U_Competitor" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
+        player setObjectTextureGlobal [0, "textures\resgate\cloth\m_rec.jpg"];
       };
-      if (uniform player isEqualTo "U_I_HeliPilotCoveralls" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
+      if (uniform player isEqualTo "U_B_HeliPilotCoveralls" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
         player setObjectTextureGlobal [0, "textures\resgate\cloth\pilot.jpg"];
       };
-      if (uniform player isEqualTo "U_I_pilotCoveralls" && (FETCH_CONST(cxp_mediclevel) >= 8)) then {
+      if (uniform player isEqualTo "U_l_CombatUniform_shortsleeve" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
         player setObjectTextureGlobal [0, "textures\resgate\cloth\pilotC.jpg"];
+      };
+      if (uniform player isEqualTo "U_l_CombatUniform" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
+        player setObjectTextureGlobal [0, "textures\resgate\cloth\pilotC.jpg"];
+      };
+      if (uniform player isEqualTo "U_O_CombatUniform_ocamo" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
+        player setObjectTextureGlobal [0, "textures\resgate\cloth\m_incendio.jpg"];
       };
       // outros itens
       if (backpack player isEqualTo "B_Bergen_dgtl_F" && (FETCH_CONST(cxp_mediclevel) >= 1)) then {
