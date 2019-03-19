@@ -1,0 +1,72 @@
+class Cxp_Pickup_Items {
+	idd = 1520;
+	name= "cxp_pickup_items";
+	movingEnable = false;
+	enableSimulation = true;
+	onLoad = "[] spawn cxp_fnc_pickupItems";
+	
+	class controlsBackground {
+		class Cxp_RscTitleBackground:Cxp_RscText {
+			colorBackground[] = {0.4, 0, 0, 0.7};
+			idc = -1;
+			x = 0.1;
+			y = 0.2;
+			w = 0.6;
+			h = (1 / 25);
+		};
+		
+		class MainBackground:Cxp_RscText {
+			colorBackground[] = {0, 0, 0, 0.7};
+			idc = -1;
+			x = 0.1;
+			y = 0.2 + (11 / 250);
+			w = 0.6;
+			h = 0.6 - (22 / 250);
+		};
+	};
+	
+	class controls {
+
+		
+		class Title : Cxp_RscTitle {
+			colorBackground[] = {0, 0, 0, 0};
+			idc = -1;
+			text = "Pegar Itens";
+			x = 0.1;
+			y = 0.2;
+			w = 0.6;
+			h = (1 / 25);
+		};
+		
+		class PickupList : Cxp_RscListBox 
+		{
+			idc = 1521;
+			text = "";
+			sizeEx = 0.035;
+			
+			x = 0.12; y = 0.26;
+			w = 0.56; h = 0.370;
+		};
+
+		class CloseLoadMenu : Cxp_RscButtonMenu {
+			idc = -1;
+			text = "Fechar";
+			onButtonClick = "closeDialog 0;";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.8 - (1 / 25);
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+		
+		class PickupJoin : Cxp_RscButtonMenu {
+			idc = 1522;
+			text = "Pegar";
+			colorBackground[] = {0.5, 0, 0, 0.5};
+			onButtonClick = "[] call cxp_fnc_pickupSomeItem";
+			x = 0.32;
+			y = 0.65;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+	};
+};

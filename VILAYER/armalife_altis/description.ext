@@ -1,0 +1,469 @@
+﻿disableChannels[] = {{0,true,true},{1,true,true},{2,true,true},{3,false,false},{4,false,false},{5,false,false},{6,true,true},{7,false,true}};
+overviewText = "$STR_MISC_overviewText";
+onLoadMission="$STR_MISC_onLoadMission";
+
+// Configs CXP Framework
+#include "config\CfgRemoteExec.hpp"
+#include "config\CfgSounds.hpp"
+#include "config\CfgDebriefing.hpp"
+#include "config\CfgNotifications.hpp"
+#include "config\CfgClothing.hpp"
+#include "config\CfgLicenses.hpp"
+#include "config\CfgVehicles.hpp"
+#include "config\CfgvItems.hpp"
+#include "config\CfgGather.hpp"
+#include "config\CfgSpawnPoints.hpp"
+#include "config\CfgProcess.hpp"
+#include "config\CfgHousing.hpp"
+#include "config\CfgGarages.hpp"
+#include "config\CfgMapFilter.hpp"
+#include "config\CfgMaster.hpp"
+#include "config\CfgBasesGangues.hpp"
+#include "config\CfgCraft.hpp"
+#include "config\CfgAddActions.hpp"
+#include "config\CfgWeapons.hpp"
+
+// Dialogs CXP Framework
+#include "gui\common.hpp"
+#include "gui\shop_items.hpp"
+#include "gui\impound.hpp"
+#include "gui\bank.hpp"
+#include "gui\ticket.hpp"
+#include "gui\clothing.hpp"
+#include "gui\trunk.hpp"
+#include "gui\cxp_spawn_menu.hpp"
+#include "gui\chop_shop.hpp"
+#include "gui\pInteraction.hpp"
+#include "gui\cxp_death_screen.hpp"
+#include "gui\vehicleShop3D.hpp"
+#include "gui\federalReserve.hpp"
+#include "gui\FuelStat.hpp"
+#include "gui\newsStation.hpp"
+#include "gui\jail_time.hpp"
+#include "gui\dgAssalto.hpp"
+#include "gui\pickup.hpp"
+#include "gui\AH_vsell.hpp"
+#include "gui\AH_vbuy.hpp"
+#include "gui\mEntrada.hpp"
+#include "gui\gang.hpp"
+#include "gui\key_chain.hpp"
+#include "gui\cell_phone.hpp"
+#include "gui\player_inv.hpp"
+#include "gui\craft.hpp"
+#include "gui\market.hpp"
+#include "gui\placeables.hpp"
+#include "gui\wanted_list.hpp"
+#include "gui\moves_menu.hpp"
+#include "gui\cxp_bug_tracker_menu.hpp"
+#include "gui\cxp_gZone_menu.hpp"
+#include "gui\cxp_deadlist_menu.hpp"
+#include "gui\cxp_prefeitura_menu.hpp"
+#include "gui\cxp_map_filter.hpp"
+#include "gui\oldmessages.hpp"
+#include "gui\settings.hpp"
+#include "gui\shops.hpp"
+
+showHUD[] = {
+	true,	// Mostrar 'Scripted HUD'
+	true,	// Mostrar Informacoes do player e do veiculo
+	false,	// Mostrar Radar do veiculo
+	false,	// Mostrar Mostrar Compasso do veiculo
+	false,	// Mostrar Indicador de direcao do tanque
+	false,	// Mostrar Menu de comando
+	true,	// Mostrar Barra do grupo
+	true,	// Mostrar HUD de recursos da arma
+	true	// Mostrar Radar do Esquadrão
+};
+
+class CfgFunctions {
+	class Client_Functions {
+		tag = "cxp";
+		class Functions_Comunidade {
+			file = "comunidade";
+			class atmMarkers {postInit=1;};
+			class radArea {};
+		};
+	};
+};
+
+// Custom Init
+#include "R3F_LOG\desc_include.h"
+
+class RscTitles {
+	/* CXP Notify */
+	class CXP_Notify_RscNotification {
+		name = "CXP_RscNotification";
+		idd = -1;
+		movingEnable = true;
+		enableSimulation = true;
+		duration = 25;
+		onLoad = "uiNamespace setVariable ['CXP_RscNotification',_this select 0]";
+		class controlsBackground {
+			class CXP_Notify_RscTxt {
+				idc = 1001;
+				x = safezoneX;
+				y = 0.291 * safezoneH + safezoneY;
+				w = 0.006 * safezoneW;
+				h = 0 * safezoneH;
+				type = 0;
+				style = 0;
+				shadow = 1;
+				colorShadow[] = {0, 0, 0, 0.5};
+				font = "PuristaSemiBold";
+				SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+				text = "";
+				colorText[] = {1,1,1,1};
+				colorBackground[] = {0,0,0,0};
+				linespacing = 1;
+				tooltipColorText[] = {1,1,1,1};
+				tooltipColorBox[] = {1,1,1,1};
+				tooltipColorShade[] = {0,0,0,0.65};
+			};
+			class CXP_Notify_RscStctedTxt {
+				idc = 1000;
+				text = "";
+				x = safezoneX;
+				y = 0.291 * safezoneH + safezoneY;
+				w = 0.180469 * safezoneW;
+				h = 0 * safezoneH;
+				type = 13;
+				style = 0;
+				colorText[] ={1,1,1,1};
+				class Attributes{font = PuristaSemiBold;color = "#ffffff";align = "left";shadow = 1;};
+				size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+				shadow = 1;
+				colorBackground[] = {-1,-1,-1,0.8};
+			};
+		};
+	};
+	/* ProgressBar */
+	class cxp_progress {
+		name = "cxp_progress";
+		idd = 38200;
+		fadein=0;
+		duration = 99999999999;
+		fadeout=0;
+		movingEnable = false;
+		onLoad="uiNamespace setVariable ['cxp_progress',_this select 0]";
+		objects[]={};
+
+		class controlsBackground {
+			class background: Cxp_RscText {
+				idc = -1;
+				colorBackground[] = {0,0,0,0.7};
+				x = 0.38140 * safezoneW + safezoneX;
+				y = 0.06 * safezoneH + safezoneY;
+				w = 0.65;
+				h = 0.05;
+			};
+			class ProgressBar: Cxp_RscProgress {
+				idc = 38201;
+				x = 0.38140 * safezoneW + safezoneX;
+				y = 0.06 * safezoneH + safezoneY;
+				w = 0.65;
+				h = 0.05;
+			};
+
+			class ProgressText: Cxp_RscText {
+				idc = 38202;
+				text = "Barra de progresso (50%)...";
+				x = 0.386 * safezoneW + safezoneX;
+				y = 0.0635 * safezoneH + safezoneY;
+				w = 0.65;
+				h = (1 / 25);
+			};
+		};
+	};
+	class cxp_timer {
+		name = "cxp_timer";
+		idd = 38300;
+		fadeIn = 1;
+		duration = 99999999999;
+		fadeout = 1;
+		movingEnable = false;
+		onLoad = "uiNamespace setVariable ['cxp_timer',_this select 0]";
+		objects[] = {};
+
+		class controlsBackground {
+			class TimerIcon: cxp_RscPicture {
+				idc = -1;
+				text = "\a3\ui_f\data\IGUI\RscTitles\MPProgress\timer_ca.paa";
+				x = 0.00499997 * safezoneW + safezoneX;
+				y = 0.291 * safezoneH + safezoneY;
+				w = 0.04;
+				h = 0.045;
+			};
+
+			class TimerText: Cxp_RscText {
+				colorBackground[] = {0,0,0,0};
+				idc = 38301;
+				text = "";
+				x = 0.0204688 * safezoneW + safezoneX;
+				y = 0.2778 * safezoneH + safezoneY;
+				w = 0.09125 * safezoneW;
+				h = 0.055 * safezoneH;
+			};
+		};
+	};
+	/* Hud_NameTags */
+	class Cxp_HUD_nameTags {
+		idd = -1;
+		duration = 1e+011;
+		name = "Cxp_HUD_nameTags";
+		onLoad = "uiNamespace setVariable ['Cxp_HUD_nameTags',_this select 0]";
+		objects[] = {};
+
+		class controls
+		{
+			class BaseIcon
+			{
+				idc = -1;
+				type = 13;
+				style = 0;
+				colorText[] = {1,1,1,1};
+				colorBackground[] = {0,0,0,0};
+				font = "PuristaMedium";
+				text = "";
+				size = 0.04;
+				shadow = 1.5;
+				w = 0; h = 0;
+				x = 0.1; y = 0.1;
+			};
+
+			class p1 : BaseIcon {idc = 78000;};
+			class p2 : BaseIcon {idc = 78000 + 1;};
+			class p3 : BaseIcon {idc = 78000 + 2;};
+			class p4 : BaseIcon {idc = 78000 + 3;};
+			class p5 : BaseIcon {idc = 78000 + 4;};
+			class p6 : BaseIcon {idc = 78000 + 5;};
+			class p7 : BaseIcon {idc = 78000 + 6;};
+			class p8 : BaseIcon {idc = 78000 + 7;};
+			class p9 : BaseIcon {idc = 78000 + 8;};
+			class p10 : BaseIcon {idc = 78000 + 9;};
+			class p11 : BaseIcon {idc = 78000 + 10;};
+			class p12 : BaseIcon {idc = 78000 + 11;};
+			class p13 : BaseIcon {idc = 78000 + 12;};
+			class p14 : BaseIcon {idc = 78000 + 13;};
+			class p15 : BaseIcon {idc = 78000 + 14;};
+			class p16 : BaseIcon {idc = 78000 + 15;};
+			class p17 : BaseIcon {idc = 78000 + 16;};
+			class p18 : BaseIcon {idc = 78000 + 17;};
+			class p19 : BaseIcon {idc = 78000 + 18;};
+			class p20 : BaseIcon {idc = 78000 + 19;};
+			class p21 : BaseIcon {idc = 78000 + 20;};
+			class p22 : BaseIcon {idc = 78000 + 21;};
+			class p23 : BaseIcon {idc = 78000 + 22;};
+			class p24 : BaseIcon {idc = 78000 + 23;};
+			class p25 : BaseIcon {idc = 78000 + 24;};
+			class p26 : BaseIcon {idc = 78000 + 25;};
+			class p27 : BaseIcon {idc = 78000 + 26;};
+			class p28 : BaseIcon {idc = 78000 + 27;};
+			class p29 : BaseIcon {idc = 78000 + 28;};
+			class p30 : BaseIcon {idc = 78000 + 29;};
+			class p31 : BaseIcon {idc = 78000 + 30;};
+			class p32 : BaseIcon {idc = 78000 + 31;};
+			class p33 : BaseIcon {idc = 78000 + 32;};
+			class p34 : BaseIcon {idc = 78000 + 33;};
+			class p35 : BaseIcon {idc = 78000 + 34;};
+			class p36 : BaseIcon {idc = 78000 + 35;};
+			class p37 : BaseIcon {idc = 78000 + 36;};
+			class p38 : BaseIcon {idc = 78000 + 37;};
+			class p39 : BaseIcon {idc = 78000 + 38;};
+			class p40 : BaseIcon {idc = 78000 + 39;};
+			class p41 : BaseIcon {idc = 78000 + 40;};
+			class p42 : BaseIcon {idc = 78000 + 41;};
+			class p43 : BaseIcon {idc = 78000 + 42;};
+			class p44 : BaseIcon {idc = 78000 + 43;};
+			class p45 : BaseIcon {idc = 78000 + 44;};
+			class p46 : BaseIcon {idc = 78000 + 45;};
+			class p47 : BaseIcon {idc = 78000 + 46;};
+			class p48 : BaseIcon {idc = 78000 + 47;};
+			class p49 : BaseIcon {idc = 78000 + 48;};
+			class p50 : BaseIcon {idc = 78000 + 49;};
+			class p51 : BaseIcon {idc = 78000 + 50;};
+			class p52 : BaseIcon {idc = 78000 + 51;};
+			class p53 : BaseIcon {idc = 78000 + 52;};
+			class p54 : BaseIcon {idc = 78000 + 53;};
+			class p55 : BaseIcon {idc = 78000 + 54;};
+			class p56 : BaseIcon {idc = 78000 + 55;};
+			class p57 : BaseIcon {idc = 78000 + 56;};
+			class p58 : BaseIcon {idc = 78000 + 57;};
+			class p59 : BaseIcon {idc = 78000 + 58;};
+			class p60 : BaseIcon {idc = 78000 + 59;};
+			class p61 : BaseIcon {idc = 78000 + 60;};
+			class p62 : BaseIcon {idc = 78000 + 61;};
+			class p63 : BaseIcon {idc = 78000 + 62;};
+			class p64 : BaseIcon {idc = 78000 + 63;};
+			class p65 : BaseIcon {idc = 78000 + 64;};
+			class p66 : BaseIcon {idc = 78000 + 65;};
+			class p67 : BaseIcon {idc = 78000 + 66;};
+			class p68 : BaseIcon {idc = 78000 + 67;};
+			class p69 : BaseIcon {idc = 78000 + 68;};
+			class p70 : BaseIcon {idc = 78000 + 69;};
+			class p71 : BaseIcon {idc = 78000 + 70;};
+			class p72 : BaseIcon {idc = 78000 + 71;};
+			class p73 : BaseIcon {idc = 78000 + 72;};
+			class p74 : BaseIcon {idc = 78000 + 73;};
+			class p75 : BaseIcon {idc = 78000 + 74;};
+			class p76 : BaseIcon {idc = 78000 + 75;};
+			class p77 : BaseIcon {idc = 78000 + 76;};
+			class p78 : BaseIcon {idc = 78000 + 77;};
+			class p79 : BaseIcon {idc = 78000 + 78;};
+			class p80 : BaseIcon {idc = 78000 + 79;};
+			class p81 : BaseIcon {idc = 78000 + 80;};
+			class p82 : BaseIcon {idc = 78000 + 81;};
+			class p83 : BaseIcon {idc = 78000 + 82;};
+			class p84 : BaseIcon {idc = 78000 + 83;};
+			class p85 : BaseIcon {idc = 78000 + 84;};
+			class p86 : BaseIcon {idc = 78000 + 85;};
+			class p87 : BaseIcon {idc = 78000 + 86;};
+			class p88 : BaseIcon {idc = 78000 + 87;};
+			class p89 : BaseIcon {idc = 78000 + 88;};
+			class p90 : BaseIcon {idc = 78000 + 89;};
+			class p91 : BaseIcon {idc = 78000 + 90;};
+			class p92 : BaseIcon {idc = 78000 + 91;};
+			class p93 : BaseIcon {idc = 78000 + 92;};
+			class p94 : BaseIcon {idc = 78000 + 93;};
+			class p95 : BaseIcon {idc = 78000 + 94;};
+			class p96 : BaseIcon {idc = 78000 + 95;};
+			class p97 : BaseIcon {idc = 78000 + 96;};
+			class p98 : BaseIcon {idc = 78000 + 97;};
+			class p99 : BaseIcon {idc = 78000 + 98;};
+			class p100 : BaseIcon {idc = 78000 + 99;};
+		};
+	};
+	/* Player HUD */
+	class playerHUD {
+		idd = -1;
+		onLoad = "uiNamespace setVariable ['playerHUD',_this select 0]";
+		duration = 10e10;
+		movingEnable = false;
+		fadein = 0;
+		fadeout = 0;
+		name = "playerHUD";
+		controlsBackground[] = {};
+		objects[] = {};
+		
+		class Controls
+		{
+			class HUD_RscStructuredTextPlayers: Cxp_RscStructuredText
+			{
+				idc = 6965;
+				x = safeZoneX + safeZoneW * 0.61493412;
+				y = safeZoneY + safeZoneH * 0.96614584;
+				w = safeZoneW * 0.3931186;
+				h = safeZoneH * 0.03385417;
+				text = "|CIV ON: 000 - MED ON: 000 - COP ON: 000|";
+				colorBackground[] = {0,0,0,0.35};
+				colorText[] = {1,1,1,1};
+				
+			};
+			class HUD_RscStructuredText: Cxp_RscStructuredText
+			{
+				idc = 6963;
+				x = safeZoneX + safeZoneW * 0.13323573;
+				y = safeZoneY + safeZoneH * 0.96614584;
+				w = safeZoneW * 0.25256223;
+				h = safeZoneH * 0.03385417;
+				text = "|carteira - banco|";
+				colorBackground[] = {0,0,0,0.35};
+				colorText[] = {1,1,1,1};
+				
+			};
+			class HUD_LOGO : cxp_RscPicture
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.84846267;
+				y = safeZoneY + safeZoneH * 0.84635417;
+				w = safeZoneW * 0.14860908;
+				h = safeZoneH * 0.11588542;
+				text = "textures\interface\logoserver.paa";
+				
+			};
+			class HUD_Background : Cxp_RscBackground 
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.38653002;
+				y = safeZoneY + safeZoneH * 0.96614584;
+				w = safeZoneW * 0.22767204;
+				h = safeZoneH * 0.03385417;
+				colorBackground[] = {0,0,0,0.35};
+				
+			};
+		    class CXP_RscProgress_HUDCommon: Cxp_RscProgress {
+				idc = -1;
+		        colorFrame[] = {0, 0, 0, 0};
+		        colorBar[] = {0,0,0,0};
+		        y = 0.972223 * safezoneH + safezoneY;
+		        w = 0.0462964 * safezoneW;
+		        h = 0.0222222 * safezoneH;
+		    };
+			class HUD_Food : CXP_RscProgress_HUDCommon
+			{
+				idc = 6969;
+				x = safeZoneX + safeZoneW * 0.39019034;
+				colorBar[] = {0,0.5,0,0.65};
+				colorFrame[] = {0, 0, 0, 0.8};
+			};
+			class HUD_Health : CXP_RscProgress_HUDCommon
+			{
+				idc = 6968;
+				x = safeZoneX + safeZoneW * 0.44802343;
+				colorBar[] = {0.85,0.05,0,0.65};
+				colorFrame[] = {0, 0, 0, 0.8};
+			};
+			class HUD_Drunk : CXP_RscProgress_HUDCommon
+			{
+				idc = 6971;
+				x = safeZoneX + safeZoneW * 0.56295755;
+				colorBar[] = {1,0.957,0,0.65};
+				colorFrame[] = {0, 0, 0, 0.8};
+			};
+			class HUD_Water : CXP_RscProgress_HUDCommon
+			{
+				idc = 6970;
+				x = safeZoneX + safeZoneW * 0.50585652;
+				colorBar[] = {0,0.25,0.65,0.65};
+				colorFrame[] = {0, 0, 0, 0.8};
+			};
+		    class CXP_RscText_HUDCommon: Cxp_RscText {
+				idc = -1;
+		        SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+		        style = ST_CENTER;
+		        y = 0.972223 * safezoneH + safezoneY;
+		        w = 0.0462964 * safezoneW;
+		        h = 0.0222222 * safezoneH;
+		    };
+			class cxp_RscText_HUDFood : CXP_RscText_HUDCommon 
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.39019034;
+				text = "$STR_HUD_Food";
+				
+			};
+			class cxp_RscText_HUDHealth : CXP_RscText_HUDCommon 
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.44802343;
+				text = "$STR_HUD_Health";
+				
+			};
+			class cxp_RscText_HUDDrunk : CXP_RscText_HUDCommon 
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.56295755;
+				text = "$STR_HUD_Drunk";
+				
+			};
+			class cxp_RscText_HUDWater : CXP_RscText_HUDCommon 
+			{
+				idc = -1;
+				x = safeZoneX + safeZoneW * 0.50585652;
+				text = "$STR_HUD_Water";
+				
+			};
+		};
+	};
+};
+ 
+#include "infiSTAR_AdminMenu.hpp" 

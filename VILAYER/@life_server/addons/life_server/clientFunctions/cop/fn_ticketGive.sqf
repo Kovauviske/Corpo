@@ -1,0 +1,19 @@
+#include "\life_server\script_macros.hpp"
+/*
+    File: fn_ticketGive.sqf
+    Author: Bryan "Tonic" Boardwine
+
+    Description:
+    Gives a ticket to the targeted player.
+*/
+if (isNil "cxp_ticket_unit") exitWith {hint localize "STR_Cop_TicketNil"};
+if (isNull cxp_ticket_unit) exitWith {hint localize "STR_Cop_TicketExist"};
+
+private _val = ctrlText 2652;
+
+if !([_val] call CXPSV_fnc_isnumber) exitWith {hint localize "STR_Cop_TicketNum"};
+if ((parseNumber _val) > 200000) exitWith {hint localize "STR_Cop_TicketOver100"};
+
+[0,"STR_Cop_TicketGive",true,[profileName,[(parseNumber _val)] call cxp_fnc_numberText,cxp_ticket_unit getVariable ["realname",name cxp_ticket_unit]]] remoteExecCall ["cxp_fnc_broadcast",RCLIENT];
+[player,(parseNumber _val)] remoteExec ["cxp_fnc_ticketPrompt",cxp_ticket_unit];
+closeDialog 0;

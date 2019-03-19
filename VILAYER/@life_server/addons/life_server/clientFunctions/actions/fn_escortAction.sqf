@@ -1,0 +1,65 @@
+#include "\life_server\script_macros.hpp"
+/*
+    File: fn_escortAction.sqf
+    Author: Bryan "Tonic" Boardwine
+	Modified : Casperento
+    Description: 
+	Attaches the desired person(_unit) to the player(player) and "escorts them".
+*/
+params [
+	["_unit", objNull, [objNull]]
+];
+
+if (!isNull (player getVariable ["escortingPlayer",objNull])) exitWith {};
+if (isNil "_unit" || {isNull _unit} || {!isPlayer _unit}) exitWith {};
+if !(side _unit in [civilian,independent]) exitWith {};
+if (player distance _unit > 3) exitWith {};
+
+switch(playerSide) do {
+	case independent: {
+		_unit attachTo [player, [0.1,1.1,0]];
+		player setVariable ["escortingPlayer", _unit];
+		player setVariable ["isEscorting", true];
+		_unit setVariable ["transporting", false, true];
+		_unit setVariable ["Escorting", true, true];
+		player reveal _unit;
+
+		[_unit] spawn {
+			_unit = _this select 0;
+			waitUntil {(!(_unit getVariable ["Escorting",false]))};
+			player setVariable ["escortingPlayer",nil];
+			player setVariable ["isEscorting",false];
+		};
+	};
+	case civilian: {
+		_unit attachTo [player, [0.1,1.1,0]];
+		player setVariable ["escortingPlayer", _unit];
+		player setVariable ["isEscorting", true];
+		_unit setVariable ["transporting", false, true];
+		_unit setVariable ["Escorting", true, true];
+		_unit setVariable ["escorted_by",[player,license_civ_bHunterLic],true];
+		player reveal _unit;
+
+		[_unit] spawn {
+			_unit = _this select 0;
+			waitUntil {(!(_unit getVariable ["Escorting",false]))};
+			player setVariable ["escortingPlayer",nil];
+			player setVariable ["isEscorting",false];
+		};
+	};
+	case west: {
+		_unit attachTo [player, [0.1,1.1,0]];
+		player setVariable ["escortingPlayer", _unit];
+		player setVariable ["isEscorting", true];
+		_unit setVariable ["transporting", false, true];
+		_unit setVariable ["Escorting", true, true];
+		player reveal _unit;
+
+		[_unit] spawn {
+			_unit = _this select 0;
+			waitUntil {(!(_unit getVariable ["Escorting",false]))};
+			player setVariable ["escortingPlayer",nil];
+			player setVariable ["isEscorting",false];
+		};
+	};
+};
