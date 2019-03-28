@@ -48,7 +48,7 @@ if (playerSide isEqualTo civilian) then {
             _position = ASLtoATL (visiblePositionASL _this);
             sleep 0.1;
         };
-        [_position] remoteExec ["life_fnc_flashbang",RCLIENT];
+        [_position] remoteExec ["cxp_fnc_flashbang",RCLIENT];
     };
     };
 };

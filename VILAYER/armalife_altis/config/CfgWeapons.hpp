@@ -217,7 +217,7 @@ class WeaponShops {
             { "ItemWatch", "", 250, -1, "" },
             { "FirstAidKit", "", 5000, -1, "call cxp_coplevel >= 1" },
             { "Chemlight_yellow", "", 1500, -1, "" },
-            { "HandGrenade_Stone", $STR_W_items_Flashbang, 25000, -1, "call cxp_coplevel >= 1" },
+            { "HandGrenade_Stone", "FlashBang", 25000, -1, "call cxp_coplevel >= 1" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 5000, -1, "call cxp_coplevel >= 1" },
             { "hgun_PDW2000_F", "", 5000, -1, "call cxp_coplevel >= 1" }, //PDW 2000
             { "hgun_P07_khk_F", "", 7500, -1, "call cxp_coplevel >= 1" }, //Apex DLC

@@ -8,15 +8,15 @@
 if !(cxp_settings_tagson) exitWith {};
 #define iconID 78000
 #define scale 0.8
- 
+
 if (visibleMap || {!alive player} || {dialog}) exitWith {500 cutText["","PLAIN"];};
- 
+
 private _ui = uiNamespace getVariable ["Cxp_HUD_nameTags",displayNull];
 if (isNull _ui) then {
     500 cutRsc["Cxp_HUD_nameTags","PLAIN"];
     _ui = uiNamespace getVariable ["Cxp_HUD_nameTags",displayNull];
 };
- 
+
 private _masks = CXP_SETTINGS(getArray,"tagsCFG_clothing_masks");
 {
     _idc = _ui displayCtrl (iconID + _forEachIndex);
@@ -129,89 +129,37 @@ private _masks = CXP_SETTINGS(getArray,"tagsCFG_clothing_masks");
                     case ((side _x isEqualTo independent && {!isNil {_x getVariable "rankmedic"}} && playerSide != independent) || (_x in (units group player) && playerSide isEqualTo independent) && alive _x): {
                         format["<img image='%1' size='1.5'></img><t size='1.35' color='#FF0000'>%2</t><br/><t size='0.8'>[%3]</t>",
                             switch ((_x getVariable "rankmedic")) do {
-                                case 1: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 0)};
-                                case 2: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 1)};
-                                case 3: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 2)};
-                                case 4: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 3)};
-                                case 5: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 4)};
-                                case 6: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 5)};
-                                case 7: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 6)};
-                                case 8: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 7)};
-                                case 9: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 8)};
-                                case 10: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 9)};
-                                case 11: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 10)};
-                                case 12: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 11)};
-                                case 13: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 12)};
-                                case 14: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 13)};
-                                case 15: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 14)};
-                                case 16: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 15)};
-                                case 17: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 16)};
-                                case 18: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 17)};
-                                case 19: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 18)};
-                                case 20: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 19)};
-                                case 21: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 20)};
-                                case 22: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 21)};
-                                case 23: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 22)};
-                                case 24: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 23)};
-                                case 25: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 24)};
-                                case 26: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 25)};
-                                case 27: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 26)};
-                                case 28: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 27)};
-                                case 29: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 28)};
-                                case 30: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 29)};
-                                case 31: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 30)};
-                                case 32: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 31)};
-                                case 33: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 32)};
-                                case 34: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 33)};
-                                case 35: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 34)};
-                                case 36: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 35)};
-                                case 37: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 36)};
-                                case 38: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 37)};
-                                case 39: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 38)};
-                                case 40: {(CXP_SETTINGS(getArray,"tagsCFG_icons_COP") select 39)};
+                                case 1: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 0)};
+                                case 2: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 1)};
+                                case 3: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 2)};
+                                case 4: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 3)};
+                                case 5: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 4)};
+                                case 6: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 5)};
+                                case 7: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 6)};
+                                case 8: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 7)};
+                                case 9: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 8)};
+                                case 10: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 9)};
+                                case 11: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 10)};
+                                case 12: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 11)};
+                                case 13: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 12)};
+                                case 14: {(CXP_SETTINGS(getArray,"tagsCFG_icons_MED") select 13)};
                             },
                             _x getVariable ["realname",name _x],
-                            switch ((_x getVariable "rank")) do {
-                                case 1: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 0)};
-                                case 2: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 1)};
-                                case 3: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 2)};
-                                case 4: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 3)};
-                                case 5: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 4)};
-                                case 6: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 5)};
-                                case 7: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 6)};
-                                case 8: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 7)};
-                                case 9: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 8)};
-                                case 10: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 9)};
-                                case 11: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 10)};
-                                case 12: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 11)};
-                                case 13: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 12)};
-                                case 14: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 13)};
-                                case 15: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 14)};
-                                case 16: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 15)};
-                                case 17: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 16)};
-                                case 18: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 17)};
-                                case 19: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 18)};
-                                case 20: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 19)};
-                                case 21: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 20)};
-                                case 22: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 21)};
-                                case 23: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 22)};
-                                case 24: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 23)};
-                                case 25: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 24)};
-                                case 26: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 25)};
-                                case 27: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 26)};
-                                case 28: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 27)};
-                                case 29: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 28)};
-                                case 30: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 29)};
-                                case 31: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 30)};
-                                case 32: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 31)};
-                                case 33: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 32)};
-                                case 34: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 33)};
-                                case 35: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 34)};
-                                case 36: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 35)};
-                                case 37: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 36)};
-                                case 38: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 37)};
-                                case 39: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 38)};
-                                case 40: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_COP") select 39)};
+                            switch ((_x getVariable "rankmedic")) do {
+                                case 1: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 0)};
+                                case 2: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 1)};
+                                case 3: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 2)};
+                                case 4: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 3)};
+                                case 5: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 4)};
+                                case 6: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 5)};
+                                case 7: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 6)};
+                                case 8: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 7)};
+                                case 9: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 8)};
+                                case 10: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 9)};
+                                case 11: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 10)};
+                                case 12: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 11)};
+                                case 13: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 12)};
+                                case 14: {(CXP_SETTINGS(getArray,"tagsCFG_subTitles_MED") select 13)};
                             }
                         ]
                     };
@@ -256,7 +204,7 @@ private _masks = CXP_SETTINGS(getArray,"tagsCFG_clothing_masks");
                         };
                     };
                 };
- 
+
                 _idc ctrlSetStructuredText parseText _text;
                 _idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
                 _idc ctrlSetScale scale;

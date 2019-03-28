@@ -25,7 +25,7 @@ if (!alive player || (_damage == 1) || (player getVariable ["exitRad",true])) ex
 };
 
 // this is the check to see if they are wearing protective clothing
-if (((uniform player) isEqualTo "U_C_Scientist") && ((headgear player) isEqualTo "H_PilotHelmetFighter_B")) then {
+if (((uniform player) isEqualTo "U_C_Scientist") && ((headgear player) isEqualTo "H_HelmetSpecO_blk")) then {
 	//rad sound
 	playSound "radiation";
 
@@ -42,7 +42,7 @@ if (((uniform player) isEqualTo "U_C_Scientist") && ((headgear player) isEqualTo
 		_rad3 ppEffectCommit 1;
 	};
 	sleep 5;
-	
+
 	//loops the script until they exit
 	[] spawn cxp_fnc_radArea;
 

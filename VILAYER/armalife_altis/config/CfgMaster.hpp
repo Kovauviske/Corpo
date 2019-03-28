@@ -436,10 +436,10 @@ class CxpBasic_Settings {
     "[GATE] Aspirante",
     "[GATE] 2º Tenente",
     "[GATE] 1º Tenente",
-    "[CMD] Capitao",
-    "[CMD] Major",
-    "[CMD] Tenente-Coronel",
-    "[CMD] Coronel",
+    "[PM.CMD] Capitao",
+    "[PM.CMD] Major",
+    "[PM.CMD] Tenente-Coronel",
+    "[PM.CMD] Coronel",
     "[PF] Estagiario",
     "[PF] Agente",
     "[PF] Delegado",
@@ -460,15 +460,20 @@ class CxpBasic_Settings {
   };
   tagsCFG_subTitles_MED[] = {
     // cxp_mediclevel : 1 a 9
-    "Estudante",
-    "Técnico em Enfermagem",
-    "Enfermeiro",
-    "Médico Residente",
-    "Médico",
-    "Cirurgião",
-    "Cirurgião Chefe",
-    "Subcomandante",
-    "Comandante"
+    "[BM] Recruta",
+    "[BM] Soldado",
+    "[BM] Cabo",
+    "[BM] 3º Sargento",
+    "[BM] 2º Sargento",
+    "[BM] 1º Sargento",
+    "[BM] Sub-Tenente",
+    "[BM] Aspirante",
+    "[BM] 2º Tenente",
+    "[BM] 1º Tenente",
+    "[BM.CMD] Capitao",
+    "[BM.CMD] Major",
+    "[BM.CMD] Tenente-Coronel",
+    "[BM.CMD] Coronel",
   };
 
   /* SALARIOS - CIV/COP/MED */
@@ -529,15 +534,20 @@ class CxpBasic_Settings {
     // Salario MED
   paycheck_med[] = {
     0,
-    50000,  // NIVEL 1
-    55000,  // NIVEL 2
-    60000,  // NIVEL 3
-    65000,  // NIVEL 4
-    70000,  // NIVEL 5
-    75000,  // NIVEL 6
-    80000,  // NIVEL 7
-    90000,  // NIVEL 8
-    100000  // NIVEL 9
+    20000,  // NIVEL 1
+    30000,  // NIVEL 2
+    35000,  // NIVEL 3
+    40000,  // NIVEL 4
+    45000,  // NIVEL 5
+    50000,  // NIVEL 6
+    55000, // NIVEL 7
+    65000,  // NIVEL 8
+    70000,  // NIVEL 9
+    85000,  // NIVEL 10
+    90000,  // NIVEL 11
+    95000,  // NIVEL 12
+    100000,  // NIVEL 13
+    120000  // NIVEL 14
   };
   paycheck_period = 30;   //Scaled in minutes
   bank_transferTax = .05; //Tax that player pays when transferring money from ATM. Tax = Amount * multiplier

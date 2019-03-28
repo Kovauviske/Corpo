@@ -95,7 +95,7 @@ switch (playerSide) do {
     };
     case independent: {
         _cfgSalario = getArray(missionConfigFile >> "CxpBasic_Settings" >> "paycheck_med");
-        for "_i" from 0 to 9 do {
+        for "_i" from 0 to 14 do {
             if ((call cxp_mediclevel) isEqualTo _i) then {
                 cxp_paycheck = _cfgSalario select _i;
             };
