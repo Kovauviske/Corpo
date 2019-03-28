@@ -1,4 +1,4 @@
-#include "\life_server\script_macros.hpp"
+'''#include "\life_server\script_macros.hpp"
 /*
     File: fn_handleDamage.sqf
     Author: Bryan "Tonic" Boardwine
@@ -66,7 +66,7 @@ if !(isNull _source) then {
         if (vehicle _source isKindOf "LandVehicle") then {
             if ((alive _unit) && (isPlayer _source)) then {
                 _damage = 0.001;
-                // Retirando licenca de motorista caso configurado para..        
+                // Retirando licenca de motorista caso configurado para..
                 if (CXP_SETTINGS(getNumber,"remover_lic_motorista_navaia") isEqualTo 1) then {
                     if (cxp_CXPHC_isActive) then {
                         [getPlayerUID _driver,_driver getVariable ["realname",name _driver],"187V"] remoteExecCall ["CXPHC_fnc_wantedAdd",CXP_HC];
