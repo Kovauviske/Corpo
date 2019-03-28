@@ -27,6 +27,19 @@ class Clothing {
             { "U_C_Poloshirt_burgundy", "", 150, "" },
             { "U_C_Poloshirt_tricolour", "", 150, "" },
             { "U_C_Commoner1_1", "", 150, "" },
+            { "U_C_Man_casual_5_F", "", 150, "" },
+            { "U_C_Man_casual_4_F", "", 150, "" },
+            { "U_C_Man_casual_6_F", "", 150, "" },
+            { "U_C_IDAP_Man_Tee_F", "", 150, "" },
+            { "U_C_IDAP_Man_TeeShorts_F", "", 150, "" },
+            { "U_C_Poor1", "", 150, "" },
+            { "U_C_Mechanic_01_F", "", 150, "" },
+            { "U_C_man_sport_1_F", "", 150, "" },
+            { "U_C_man_sport_2_F", "", 150, "" },
+            { "U_C_man_sport_3_F", "", 150, "" },
+            { "U_C_IDAP_Man_Jeans_F", "", 150, "" },
+            { "U_C_IDAP_Man_shorts_F", "", 150, "" },
+            { "U_l_C_Soldier_Bandit_1_F", "", 150, "" },
             { "U_C_Poor_2", "Rag tagged clothes", 250, "" },
             { "U_IG_Guerilla2_2", "Green stripped shirt & Pants", 650, "" },
             { "U_IG_Guerilla3_1", "Brown Jacket & Pants", 735, "" },
@@ -96,7 +109,7 @@ class Clothing {
             { "B_Carryall_oli", "", 7500, "" },
             { "B_Carryall_khk", "", 7500, "" },
             { "B_Carryall_cbr", "", 7500, "" },
-            { "B_Bergen_dgtl_F", "", 15000,"" } // MOCHILAO
+            { "B_Bergen_dgtl_F", "", 25000,"" } // MOCHILAO
         };
     };
 
@@ -107,36 +120,36 @@ class Clothing {
         side = "cop";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-           	{ "U_I_G_Story_Protagonist_F", "Trasito", 5000, "call cxp_coplevel >= 1" }, //Transito
+           	{ "U_BG_Guerilla2_1", "Trasito", 5000, "call cxp_coplevel >= 1" }, //Transito
             { "U_Rangemaster", "Uniforme Recruta", 6000, "call cxp_coplevel == 2" }, //Policia Militar - Recruta
             { "U_BG_Guerrilla_6_1", "Uniforme Aguia", 15000, "call cxp_coplevel >= 3" }, //Policia Militar - Recruta
-		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 5000 "call cxp_coplevel == 3" }, //Policia Militar - Soldado
-		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4500, "call cxp_coplevel == 4" }, //Policia Militar - Cabo
-			      { "U_I_CombatUniform_shortsleeve", "Uniforme PM", 4000, "call cxp_coplevel == 6" }, //Policia Militar - 3ª Sargento
-		      	{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3500, "call cxp_coplevel == 7" }, //Policia Militar - 2ª Sargento
-			      { "U_I_CombatUniform_shortsleeve", "Uniforme PM", 3000, "call cxp_coplevel == 8" }, //Policia Militar - 1ª Sargento
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 2500, "call cxp_coplevel == 9" }, //Policia Militar - SubTenente
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "U_I_CombatUniform_shortsleeve", "Uniforme PM", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
+		      	{ "U_B_CombatUniform_mcam", "Uniforme PM", 5000 "call cxp_coplevel == 3" }, //Policia Militar - Soldado
+		      	{ "U_B_CombatUniform_mcam", "Uniforme PM", 4500, "call cxp_coplevel == 4" }, //Policia Militar - Cabo
+			      { "U_B_CombatUniform_mcam", "Uniforme PM", 4000, "call cxp_coplevel == 6" }, //Policia Militar - 3ª Sargento
+		      	{ "U_B_CombatUniform_mcam", "Uniforme PM", 3500, "call cxp_coplevel == 7" }, //Policia Militar - 2ª Sargento
+			      { "U_B_CombatUniform_mcam", "Uniforme PM", 3000, "call cxp_coplevel == 8" }, //Policia Militar - 1ª Sargento
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 2500, "call cxp_coplevel == 9" }, //Policia Militar - SubTenente
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
+			{ "U_B_CombatUniform_mcam", "Uniforme PM", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
             { "U_Rangemaster", "Uniforme Recruta", 6000, "call cxp_coplevel == 12" }, //Policia Militar - Divisão ROCAM  - Recruta
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 4000, "call cxp_coplevel == 15" }, //Policia Militar - Divisão ROCAM - 2ª Sargento
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 3500, "call cxp_coplevel == 16" }, //Policia Militar - Divisão ROCAM - 1ª Sargento
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - SubTenente
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "I_Soldier_AAA_F", "Uniforme PM-ROCAM", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 4000, "call cxp_coplevel == 15" }, //Policia Militar - Divisão ROCAM - 2ª Sargento
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 3500, "call cxp_coplevel == 16" }, //Policia Militar - Divisão ROCAM - 1ª Sargento
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - SubTenente
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
+		    { "U_I_CombatUniform_shortsleeve", "Uniforme PM-ROCAM", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "U_Rangemaster", "Uniforme Recruta", 6000, "call cxp_coplevel == 22" }, //Policia Militar - Divisão GATE  - Recruta
             { "U_I_CombatUniform", "Uniforme PM-GATE", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "U_I_CombatUniform", "Uniforme PM-GATE", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
@@ -160,6 +173,10 @@ class Clothing {
             { "H_Cap_police", "Chapeu - Recruta", 5000, "call cxp_coplevel == 2" }, //Recruta
             { "H_Cap_police", "Chapeu - Recruta", 5000, "call cxp_coplevel == 12" }, //Recruta
             { "H_Cap_police", "Chapeu - Recruta", 5000, "call cxp_coplevel == 22" }, //Recruta
+            { "H_Beret_gen_F", "Comando", 5000, "call cxp_coplevel == 32" }, //Recruta
+            { "H_Beret_gen_F", "Comando", 5000, "call cxp_coplevel == 33" }, //Recruta
+            { "H_Beret_gen_F", "Comando", 5000, "call cxp_coplevel == 34" }, //Recruta
+            { "H_Beret_gen_F", "Comando", 5000, "call cxp_coplevel == 35" }, //Recruta
             { "H_Beret_blk", "Boina Sd e Cb", 5000, "call cxp_coplevel == 3" }, //Policia Militar - Soldado
             { "H_Beret_blk", "Boina Sd e Cb", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM - Soldado
             { "H_Beret_blk", "Boina Sd e Cb", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE - Soldado
@@ -191,10 +208,11 @@ class Clothing {
             { "H_Beret_02", "Boina Sgt e Ten", 200, "call cxp_coplevel == 33" }, //Policia Militar - COMANDO - MAJOR
             { "H_Beret_02", "Boina Sgt e Ten", 100, "call cxp_coplevel == 34" }, //Policia Militar - COMANDO - Tenente Coronel
             { "H_Beret_02", "Boina Sgt e Ten", 50, "call cxp_coplevel == 35" }, //Policia Militar - COMANDO - CORONEL
-            { "H_Beret_Colonel", "Boina Sgt e Ten", 500, "call cxp_coplevel == 32" }, //Policia Militar - COMANDO - CAPITÃO
-            { "H_Beret_Colonel", "Boina Sgt e Ten", 200, "call cxp_coplevel == 33" }, //Policia Militar - COMANDO - MAJOR
-            { "H_Beret_Colonel", "Boina Sgt e Ten", 100, "call cxp_coplevel == 34" }, //Policia Militar - COMANDO - Tenente Coronel
-            { "H_Beret_Colonel", "Boina Sgt e Ten", 50, "call cxp_coplevel == 35" }, //Policia Militar - COMANDO - CORONEL
+            { "H_PilotHelmertHeli_B", "Capacete Aguia", 500, "call cxp_coplevel >= 3" }, //Policia Militar - COMANDO - CAPITÃO
+            { "H_Beret_Colonel", "Boina Comando", 500, "call cxp_coplevel == 32" }, //Policia Militar - COMANDO - CAPITÃO
+            { "H_Beret_Colonel", "Boina Comando", 200, "call cxp_coplevel == 33" }, //Policia Militar - COMANDO - MAJOR
+            { "H_Beret_Colonel", "Boina Comando", 100, "call cxp_coplevel == 34" }, //Policia Militar - COMANDO - Tenente Coronel
+            { "H_Beret_Colonel", "Boina Comando", 50, "call cxp_coplevel == 35" }, //Policia Militar - COMANDO - CORONEL
             { "H_CrewHelmetHeli_B", "Capacete - Rocam", 10000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM - Soldado
             { "H_CrewHelmetHeli_B", "Capacete - Rocam", 9000, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
             { "H_CrewHelmetHeli_B", "Capacete - Rocam", 8000, "call cxp_coplevel == 15" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -226,10 +244,6 @@ class Clothing {
 			{ "G_Spectacles_Tinted", "Oculos", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_Spectacles_Tinted", "Oculos", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
 			{ "G_Spectacles_Tinted", "Oculos", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_Spectacles_Tinted", "Oculos", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_Spectacles_Tinted", "Oculos", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_Spectacles_Tinted", "Oculos", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_Spectacles_Tinted", "Oculos", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_Spectacles_Tinted", "Oculos", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_Spectacles_Tinted", "Oculos", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_Spectacles_Tinted", "Oculos", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -239,10 +253,6 @@ class Clothing {
 		    { "G_Spectacles_Tinted", "Oculos", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_Spectacles_Tinted", "Oculos", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_Spectacles_Tinted", "Oculos", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_Spectacles_Tinted", "Oculos", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_Spectacles_Tinted", "Oculos", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_Spectacles_Tinted", "Oculos", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_Spectacles_Tinted", "Oculos", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_Spectacles_Tinted", "Oculos", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_Spectacles_Tinted", "Oculos", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_Spectacles_Tinted", "Oculos", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -265,10 +275,6 @@ class Clothing {
 			{ "G_Goggles_VR", "Oculos RV", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_Goggles_VR", "Oculos RV", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
 			{ "G_Goggles_VR", "Oculos RV", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_Goggles_VR", "Oculos RV", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_Goggles_VR", "Oculos RV", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_Goggles_VR", "Oculos RV", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_Goggles_VR", "Oculos RV", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_Goggles_VR", "Oculos de Sol", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_Goggles_VR", "Oculos de Sol", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_Goggles_VR", "Oculos de Sol", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -278,10 +284,6 @@ class Clothing {
 		    { "G_Goggles_VR", "Oculos de Sol", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_Goggles_VR", "Oculos de Sol", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_Goggles_VR", "Oculos de Sol", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_Goggles_VR", "Oculos de Sol", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_Goggles_VR", "Oculos de Sol", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_Goggles_VR", "Oculos de Sol", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_Goggles_VR", "Oculos de Sol", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_Goggles_VR", "Oculos de Sol", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_Goggles_VR", "Oculos de Sol", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_Goggles_VR", "Oculos de Sol", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -304,10 +306,6 @@ class Clothing {
 			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
 			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -317,10 +315,6 @@ class Clothing {
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_WirelessEarpiece_F", "Fone de Ouvido (Sem Fio)", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -342,11 +336,6 @@ class Clothing {
 			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 2500, "call cxp_coplevel == 9" }, //Policia Militar - SubTenente
 			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
-			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -356,10 +345,6 @@ class Clothing {
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_Balaclava_TI__G_blk_F", "Balaclava Camuflada (Oculos)", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -382,10 +367,6 @@ class Clothing {
 			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
 			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -395,10 +376,6 @@ class Clothing {
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_Balaclava_TI_blk_F", "Balaclava Camuflada", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -421,10 +398,6 @@ class Clothing {
 			{ "G_Balaclava_blk", "Balaclava", 2000, "call cxp_coplevel == 10" }, //Policia Militar - Aspirante
 			{ "G_Balaclava_blk", "Balaclava", 1500, "call cxp_coplevel == 11" }, //Policia Militar - Segundo Tenente
 			{ "G_Balaclava_blk", "Balaclava", 1000, "call cxp_coplevel == 12" }, //Policia Militar - Primeiro Tenente
-			{ "G_Balaclava_blk", "Balaclava", 900, "call cxp_coplevel == 32" }, //Policia Militar - Capitão
-			{ "G_Balaclava_blk", "Balaclava", 700, "call cxp_coplevel == 33" }, //Policia Militar - Major
-			{ "G_Balaclava_blk", "Balaclava", 800, "call cxp_coplevel == 34" }, //Policia Militar - Tenente Coronel
-			{ "G_Balaclava_blk", "Balaclava", 500, "call cxp_coplevel == 35" }, //Policia Militar - Coronel
 		    { "G_Balaclava_blk", "Balaclava", 5000, "call cxp_coplevel == 13" }, //Policia Militar - Divisão ROCAM  - Soldado
 		    { "G_Balaclava_blk", "Balaclava", 4500, "call cxp_coplevel == 14" }, //Policia Militar - Divisão ROCAM - Cabo
 		    { "G_Balaclava_blk", "Balaclava", 3000, "call cxp_coplevel == 17" }, //Policia Militar - Divisão ROCAM - 3ª Sargento
@@ -434,10 +407,6 @@ class Clothing {
 		    { "G_Balaclava_blk", "Balaclava", 2500, "call cxp_coplevel == 18" }, //Policia Militar - Divisão ROCAM - Aspirante
 		    { "G_Balaclava_blk", "Balaclava", 2000, "call cxp_coplevel == 19" }, //Policia Militar - Divisão ROCAM - Segundo Tenente
 		    { "G_Balaclava_blk", "Balaclava", 1500, "call cxp_coplevel == 20" }, //Policia Militar - Divisão ROCAM - Primeiro Tenente
-		    { "G_Balaclava_blk", "Balaclava", 1000, "call cxp_coplevel == 32" }, //Policia Militar - Divisão ROCAM - Capitão
-		    { "G_Balaclava_blk", "Balaclava", 900, "call cxp_coplevel == 33" }, //Policia Militar - Divisão ROCAM - Major
-		    { "G_Balaclava_blk", "Balaclava", 800, "call cxp_coplevel == 34" }, //Policia Militar - Divisão ROCAM - Tenente Coronel
-		    { "G_Balaclava_blk", "Balaclava", 500, "call cxp_coplevel == 35" }, //Policia Militar - Divisão ROCAM - Coronel
             { "G_Balaclava_blk", "Balaclava", 5000, "call cxp_coplevel == 23" }, //Policia Militar - Divisão GATE  - Soldado
             { "G_Balaclava_blk", "Balaclava", 4500, "call cxp_coplevel == 24" }, //Policia Militar - Divisão GATE - Cabo
             { "G_Balaclava_blk", "Balaclava", 4000, "call cxp_coplevel == 25" }, //Policia Militar - Divisão GATE - 3ª Sargento
@@ -512,7 +481,7 @@ class Clothing {
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Bergen_dgtl_F", "", 15000,"" } // MOCHILAO
+            { "B_Bergen_dgtl_F", "", 25000,"" } // MOCHILAO
         };
     };
 
@@ -570,19 +539,26 @@ class Clothing {
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
             { "U_Competitor", "Uniforme Recruta", 5000, "call cxp_mediclevel >= 1" },
-            { "U_l_CombatUniform", "Uniforme Resgate", 10000, "call cxp_mediclevel >= 1" },
+            { "U_l_CombatUniform_shortsleeve", "Uniforme Bombeiro", 10000, "call cxp_mediclevel >= 1" },
             { "U_B_HeliPilotCoveralls", "Uniforme Piloto", 20000, "call cxp_mediclevel >= 3" },
             { "U_O_CombatUniform_ocamo", "Uniforme Incendio", 50000, "call cxp_mediclevel >= 5" }
         };
         headgear[] = {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "H_Cap_oli", "", 10, "call cxp_mediclevel >= 1" },
-            { "H_PilotHelmetFighter_I", "", 60, "call cxp_mediclevel >= 1" },
-            { "H_CrewHelmetHeli_B", "ANTI-GAS", 80, "call cxp_mediclevel >= 1" },
-            { "H_Beret_Colonel", "", 50, "call cxp_mediclevel >= 1" }
+            { "H_Beret_gen_F", "", 10, "call cxp_mediclevel >= 1" },
+            { "H_Beret_blk", "", 10, "call cxp_mediclevel >= 1" },
+            { "H_Beret_02", "", 10, "call cxp_mediclevel >= 1" },
+            { "H_Beret_Colonel", "", 10, "call cxp_mediclevel >= 1" },
+            { "H_Cap_red", "Recruta", 10, "call cxp_mediclevel >= 1" },
+            { "H_Cap_marshal", "Soldado a Coronel", 10, "call cxp_mediclevel >= 2" },
+            { "H_CrewHelmetHeli_B", "Piloto", 80, "call cxp_mediclevel >= 1" },
+            { "H_HelmetSpecO_blk", "Incendio", 50, "call cxp_mediclevel >= 1" }
         };
         goggles[] = {
             { "NONE", $STR_C_Remove_goggles, 0, "" },
+            { "G_Combat", "", 10, "" },
+            { "G_Tactical_Clear", "", 10, "" },
+            { "G_Balaclava_TI_G_blk_F", "", 10, "call cxp_mediclevel >= 4" },
             { "G_Shades_Blue", "", 10, "" },
             { "G_Aviator", "", 70, "" },
             { "G_Diving", "", 90, "" },
@@ -597,11 +573,15 @@ class Clothing {
             { "V_LegStrapBag_black_F", "", 1050, "" },
             { "V_Safety_yellow_F", "", 1050, "" },
             { "V_Safety_orange_F", "", 1050, "" },
+            { "V_PlateCarrierGL_blk", "", 1050, "" },
+            { "V_PlateCarrierSpec_blk", "", 1050, "" },
+            { "V_TacVestlR_blk", "", 1050, "" },
+            { "V_PlateCarrier2_blk", "", 1050, "" },
             { "V_DeckCrew_red_F", "", 1050, "" }
         };
         backpacks[] = {
             { "NONE", $STR_C_Remove_backpacks, 0, "" },
-            { "B_Bergen_dgtl_F", "", 50, "" }
+            { "B_Bergen_dgtl_F", "", 25000, "" }
         };
     };
 
@@ -760,41 +740,21 @@ class Clothing {
         side = "civ";
         uniforms[] = {
             { "NONE", $STR_C_Remove_uniforms, 0, "" },
-            { "U_O_CombatUniform_ocamo", "", 7900, "" },
-            { "U_B_SpecopsUniform_sgg", "", 7900, "" },
-            { "U_O_CombatUniform_oucamo", "", 7900, "" },
-            { "U_O_SpecopsUniform_ocamo", "", 8700, "" },
-            { "U_O_SpecopsUniform_blk", "", 8700, "" },
-            { "U_O_T_Soldier_F", "", 8800, "" }, // teste
-            { "U_O_PilotCoveralls", "", 9800, "" },
-            { "U_O_OfficerUniform_ocamo", "", 9800, "" },
-            { "U_I_CombatUniform_tshirt", "", 9800, "" },
-            { "U_I_OfficerUniform", "", 10000, "" },
-            { "U_KerryBody", "", 10000, "" },
-            { "U_IG_Guerilla1_1", "", 10000, "" },
-            { "U_BG_leader", "", 11500, "" },
-            { "U_OG_Guerilla1_1", "", 11500, "" },
-            { "U_OG_leader", "", 11500, "" },
-            { "U_B_CTRG_3", "", 11500, "" },
-            { "U_B_CTRG_Soldier_urb_1_F", "", 14000, "" },
-            { "U_B_CTRG_Soldier_urb_1_F", "", 14000, "" },
-            { "U_B_CTRG_Soldier_F", "", 14000, "" },
-            { "U_B_CTRG_Soldier_3_F", "", 17000, "" },
-            { "U_B_CTRG_Soldier_2_F", "", 17000, "" },
-            { "U_I_G_Story_Protagonist_F", "", 17000, "" },
-            { "U_O_T_Officer_F", "", 19000, "" },
-            { "U_I_C_Soldier_Para_1_F", "", 19000, "" },
-            { "U_I_C_Soldier_Para_2_F", "", 19000, "" },
-            { "U_I_C_Soldier_Para_3_F", "", 19000, "" },
-            { "U_I_C_Soldier_Para_4_F", "", 19000, "" }
+            { "U_l_C_Soldier_Bandit_1_F", "", 7900, "" },
+            { "U_l_C_Soldier_Bandit_3_F", "", 7900, "" },
+            { "U_I_C_Soldier_Bandit_2_F", "", 7900, "" },
+            { "U_l_C_Soldier_Bandit_5_F", "", 7900, "" },
+            { "U_l_C_Soldier_Bandit_4_F", "", 7900, "" },
+            { "U_l_C_Soldier_Para_5_F", "", 7900, "" },
+            { "U_l_G_resistancelLeader_F", "", 19000, "" }
         };
         headgear[] =
         {
             { "NONE", $STR_C_Remove_headgear, 0, "" },
-            { "H_Beret_gen_F", "", 40, "" },
-            { "H_Beret_02", "", 120, "" },
-            { "H_Beret_red", "", 75, "" },
-            { "H_Beret_blk", "", 75, "" },
+            { "H_HeadBandage_Bloody_F", "", 40, "" },
+            { "H_PASGT_basic_olive_F", "", 120, "" },
+            { "H_HelmetB", "", 75, "" },
+            { "H_Watchap_khk", "", 75, "" },
             { "H_Bandanna_cbr", "", 470, "" },
             { "H_Bandanna_khk", "", 470, "" },
             { "H_Bandanna_sgg", "", 470, "" },
@@ -802,7 +762,7 @@ class Clothing {
             { "H_Bandanna_surfer", "", 470, "" },
             { "H_Bandanna_camo", "", 470, "" },
             { "H_BandMask_blk", "", 470, "" },
-            { "H_Cap_tan", "", 590, "" },
+            { "H_ShemagOpen_khk", "", 590, "" },
             { "H_Cap_oli", "", 590, "" },
             { "H_Cap_grn", "", 590, "" },
             { "H_Cap_grn_BI", "", 590, "" },
@@ -821,11 +781,7 @@ class Clothing {
             { "H_Shemag_tan", "", 950, "" },
             { "H_Shemag_olive", "", 950, "" },
             { "H_ShemagOpen_khk", "", 950, "" },
-            { "H_PilotHelmetHeli_B", "", 1000, "" },
-            { "H_PilotHelmetHeli_I", "", 1000, "" },
-            { "H_PilotHelmetHeli_O", "", 1000, "" },
-            { "H_PilotHelmetFighter_I", "", 5000, "" },
-            { "H_CrewHelmetHeli_B", "ANTI-GAS", 10000, "" }
+            { "H_CrewHelmetHeli_B", "Piloto", 10000, "" }
         };
         goggles[] =
         {
@@ -858,25 +814,12 @@ class Clothing {
         vests[] =
         {
             { "NONE", $STR_C_Remove_vests, 0, "" },
-            { "V_Rangemaster_belt", "", 4400, "" },
-            { "V_BandollierB_khk", "", 5600, "" },
-            { "V_BandollierB_cbr", "", 5600, "" },
-            { "V_BandollierB_oli", "", 5600, "" },
-            { "V_PlateCarrier_Kerry", "", 6650, "" },
-            { "V_PlateCarrier2_rgr", "", 6650, "" },
-            { "V_PlateCarrierIA1_dgtl", "", 6650, "" },
-            { "V_PlateCarrierIA2_dgtl", "", 6650, "" },
-            { "V_PlateCarrierL_CTRG", "", 6650, "" },
-            { "V_PlateCarrierH_CTRG", "", 6650, "" },
-            { "V_PlateCarrierSpec_rgr", "", 6650, "" },
-            { "V_PlateCarrierGL_rgr", "", 6650, "" },
-            { "V_Chestrig_khk", "", 7700, "" },
-            { "V_Chestrig_rgr", "", 7700, "" },
-            { "V_Chestrig_oli", "", 7700, "" },
-            { "V_TacVest_khk", "", 8500, "" },
-            { "V_TacVest_brn", "", 8500, "" },
-            { "V_TacVest_camo", "", 8500, "" },
-            { "V_HarnessOGL_gry", "Explosivo", 1000000, "" }
+            { "V_PlateCarrierL_CTRG", "", 50000, "" },
+            { "V_PlateCarrier1_tna_F", "", 50000, "" },
+            { "V_TacVest_blk", "", 20000, "" },
+            { "V_TacVestlR_blk", "", 20000, "" },
+            { "V_PlateCarrier1_tna_F", "", 50000, "" },
+            { "V_Chestrig_blk", "", 5000, "" }
         };
         backpacks[] =
         {
@@ -898,10 +841,10 @@ class Clothing {
             { "B_Carryall_cbr", "", 6750, "" },
             { "B_Carryall_khk", "", 6750, "" },
             { "B_Carryall_oli", "", 6750, "" },
-            { "B_Carryall_mcamo", "", 6750, "" },
-            { "B_Carryall_oucamo", "", 6750, "" },
+            { "B_ViperHarness_oli_F", "", 6750, "" },
+            { "B_ViperHerness_ghex_F", "", 6750, "" },
             { "B_Carryall_ocamo", "", 6750, "" },
-            { "B_Bergen_dgtl_F", "", 13500, "" } // MOCHILAO
+            { "B_Bergen_dgtl_F", "", 25000, "" } // MOCHILAO
         };
     };
 

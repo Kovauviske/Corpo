@@ -233,7 +233,7 @@ class CxpBasic_Settings {
 /* System Settings */
   /* ATM & Federal Reserve System Configurations */
   noatm_timer = 15; //Time in minutes that players cannot deposit money after selling stolen gold.
-  minimum_cops = 0; //Minimum cops required online to rob the Federal Reserve
+  minimum_cops = 8; //Minimum cops required online to rob the Federal Reserve
 
   /* Death settings */
   // Procure por '<Package name="DeathCustomMsgs">' no arquivo 'stringtable.xml' para customizar as msgs
@@ -301,7 +301,7 @@ class CxpBasic_Settings {
   revive_east = false; //true to enable opfor the ability to revive everyone or false for only medics/ems or medic/ems/cops.
   revive_fee = 10000; //Revive fee that medics will receive for revive that player
   revive_cost_player = 10000; //Revive fee that players have to pay for medics.
-  hospital_heal_fee = 500; //Fee to heal at a hospital NPC
+  hospital_heal_fee = 1000; //Fee to heal at a hospital NPC
   revive_inst_on = false; // True: Liga sistema do revive instantaneo ; False: Desliga o sistema...
   revive_inst_fee = 300000; // Preco do revive instantaneo (APENAS PARA VIP 5 e 6)
   revive_inst_delay = 20; // Delay em segundos para o botao do revive de Chessus funcionar depois do jogador ter morrido, NAO COLOCAR MENOS QUE 20seg POR QUESTOES DE SEGURANÇA
@@ -679,21 +679,21 @@ class CxpBasic_Settings {
   bCFG_bounty_bullet[] = {"B_556x45_Ball_Tracer_Red"}; // Municoes de borracha (projetil), correspondente a municao do bCFG_bounty_muni[] [CONSULTA => https://community.bistudio.com/wiki/Arma_3_CfgMagazines ]
   bCFG_bounty_muni[] = {"150Rnd_556x45_Drum_Mag_Tracer_F"}; // Municoes de borracha (municao) [CONSULTA => https://community.bistudio.com/wiki/Arma_3_CfgMagazines ]
   bCFG_bloquear_arma = true; // True: impede que outros jogadores peguem a arma de bala de borracha, False: nao impede
-  bCFG_distancia_borracha = 200; // Distancia em metros que a bala de borracha alcanca (Em METROS)
+  bCFG_distancia_borracha = 50; // Distancia em metros que a bala de borracha alcanca (Em METROS)
   bCFG_tempo_bounties = 120; // De quanto em quanto tempo o BH pode ter alvos-recompensas ativos (em seg) [PADRAO: 120seg=2min]
   bCFG_raio_track = 300; // Raio da circunferencia do rastreador no mapa (Padrao: 300m, Diametro: 600m) (Em METROS)
   bCFG_cadeia_mrks[] = {"BH_spawn_veh","Correctional_Facility"}; // Perto de qual marcador o bounty hunter vai conseguir enviar alguem para a prisao
   bCFG_delay_recomp = 60; // Delay que o player deve esperar para localizar outra recompensa novamente (em segundos)
   bCFG_perdao_entrada = 100000; // Taxa cobrada do player para retirar ele da lista de procurados quando ele entra para os BHs , caso esteja nela [PADRAO: 100k]
   bCFG_fire_safezone = false; // True: Bounty Hunter pode atirar na safe. False: BH tomara aviso se atirar dentro de safezone
-  bCFG_alvo_valor_min = 2000; // Valor minimo que o jogador deve ter na cabeca para ser escolhido como alvo recompensa, menor que esse valor nao sera cacado pelos BHs
+  bCFG_alvo_valor_min = 50000; // Valor minimo que o jogador deve ter na cabeca para ser escolhido como alvo recompensa, menor que esse valor nao sera cacado pelos BHs
 
   /* Carteis Config -> Casperento */
   parcela_cartel = true; // True : liga ... False : desliga -> 10% do valor total ganho ao vender drogas (heroina,coca,meta) vai para o cartel(gangue) que domina o mercado
   parcela_cartel_multi = .1;// .1 ou 0.1 = 10% de desconto do farm de todo mundo na hora da venda para o traficante (drogas)
 
   /* Radares de velocidade -> Casperento */
-  veloc_estrada = 100; // Velocidade permitida em radares de estrada
+  veloc_estrada = 120; // Velocidade permitida em radares de estrada
   veloc_cidade = 40; // Velocidade permitida em radares de cidades (safe)
   valor_multa = 3000; //preço a ser descontado se o player levar multa por excesso de veloc. (com licença de motorista)
   valor_multa_smot = 4000; //preço a ser descontado se o player levar multa por excesso de veloc. (sem licença de motorista)
@@ -861,7 +861,7 @@ class CxpBasic_Settings {
 		"bipod_01_F_blk"
 	};
   medico_imortal = false; // True: medico nao morre, False: medico morre -- MAS MORRERA DE FOME OU DE SEDE DE TODO JEITO!!!
-  multa_autom_samu = 5000; // Valor da multa automatica enviada para o player que fugir do samu
+  multa_autom_samu = 15000; // Valor da multa automatica enviada para o player que fugir do samu
   samu_bote = "C_Rubberboat"; // Classname do bote que sera spawnado para ser o bote salva-vidas
   heli_samu_bote[] = { // Helicopteros capazes de dropar o bote salva-vidas
     "B_Heli_Light_01_F",
@@ -872,12 +872,12 @@ class CxpBasic_Settings {
   deadList_raioMultiDead = 100; // Raio de alcance, em metros, da circunferencia que sera marcada na area que contiver mais de 1 morto proximo ao outro (ambos serao removidos da lista de mortos para que outros medicos nao escolham os mesmos pacientes)
 
   /* Script de assaltos -> Casperento */
-  premio_assalto_posto = 70000; // preco granho ao assaltar um posto (PREÇO FIXO)
-  minCopOn_assalto_posto = 0; // Numero de cops minimo para assaltar um posto
+  premio_assalto_posto = 200000; // preco granho ao assaltar um posto (PREÇO FIXO)
+  minCopOn_assalto_posto = 3; // Numero de cops minimo para assaltar um posto
   tempoVoltarNpc_assalto_posto = 300; // Tempo em seg. para voltar as ações normais do npc do posto, para assaltar novamente (PADRAO: 300seg = 5min)
 
-  premio_assalto_banco = 300000; // preco granho ao assaltar uma AGENCIA (PREÇO FIXO)
-  minCopOn_assalto_banco = 0; // Numero de cops minimo para assaltar uma AGENCIA
+  premio_assalto_banco = 2000000; // preco granho ao assaltar uma AGENCIA (PREÇO FIXO)
+  minCopOn_assalto_banco = 5; // Numero de cops minimo para assaltar uma AGENCIA
   tempoVoltarNpc_assalto_banco = 2400; // Tempo em seg. para poder assaltar determinada AGENCIA novamente (PADRAO: 300seg = 5min)
 
   /* Menu Prefeitura -> Casperento */
@@ -1003,7 +1003,7 @@ class CxpBasic_Settings {
     {"STR_Crime_187V","2000","187V"},
     {"STR_Crime_187","10000","187"},
 	{"STR_Crime_175","15000","175"},
-    {"STR_Crime_901","1000000","901"},
+    {"STR_Crime_901","400000","901"},
     {"STR_Crime_215","30000","215"},
     {"STR_Crime_213","50000","213"},
     {"STR_Crime_211","80000","211"},

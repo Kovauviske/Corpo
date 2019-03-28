@@ -66,6 +66,13 @@ class WeaponShops {
         side = "civ";
         conditions = "license_civ_rebellic";
         items[] = {
+            { "Binocular", "", 750, -1, "" },
+            { "ItemGPS", "", 500, -1, "" },
+            { "ItemMap", "", 250, -1, "" },
+            { "ItemCompass", "", 250, -1, "" },
+            { "ItemWatch", "", 250, -1, "" },
+            { "FirstAidKit", "", 750, -1, "" },
+            { "Chemlight_red", "", 1500, -1, "" },
             { "arifle_TRG20_F", "", 25000, -1, "" },
             { "hgun_PDW2000_F", "", 50000, -1, "" }, //PDW 2000
             { "hgun_P07_khk_F", "", 75000, -1, "" }, //Apex DLC
@@ -82,7 +89,6 @@ class WeaponShops {
             { "arifle_SPAR_01_GL_blk_F", "", 700000, -1, "" }, //SPAR-16 5,56MM COM GL Preta
             { "arifle_SPAR_02_blk_F", "", 900000, -1, "" }, //SPAR-16S 5,56MM Preta
             { "arifle_Katiba_C_F", "", 350000, -1, "" }, //Katiba Normal
-		        { "arifle_Katiba_GL_ACO_pointer_snds_F", "", 400000, -1, "" }, // Katiba GL
             { "arifle_MXC_Black_F", "", 500000, -1, "" } //MXC 6,5MM Preta
   };
         mags[] = {
@@ -94,7 +100,7 @@ class WeaponShops {
             { "20Rnd_556x45_UW_mag", "", 600, -1, "" },
             { "30Rnd_556x45_Stanag_Tracer_Red", "", 1300, -1, "" },
             { "UGL_FlareRed_F", "", 1000, -1, "" },
-            { "30Rnd_9x21_Green_Mag", "", 100000, -1, "" },
+            { "30Rnd_9x21_Green_Mag", "", 10000, -1, "" },
             { "30Rnd_65x39_caseless_green_mag_Tracer", "", 2000, -1, "" }, //Apex DLC
             { "16Rnd_9x21_green_Mag", "", 1000, -1, "" },
             { "11Rnd_45ACP_Mag", "", 1000, -1, "" },
@@ -108,6 +114,7 @@ class WeaponShops {
             { "30Rnd_580x42_Mag_Tracer_F", "", 7500, -1, "" },
             { "200Rnd_556x45_Box_Tracer_F", "", 25000, -1, "" },
             { "30Rnd_65x39_caseless_mag_Tracer", "", 8500, -1, "" },
+            { "200Rnd_556x45_Box_Red_F", "", 2500, -1, "" },
             { "30Rnd_580x42_Mag_F", "", 60, -1, "" } //Apex DLC
         };
         accs[] = {
@@ -115,6 +122,7 @@ class WeaponShops {
             { "acc_flashlight_pistol", "", 250, -1, "" },//Pistol Flashlight
             { "acc_flashlight", "", 750, -1, "" },
             { "optic_Holosight", "", 1200, -1, "" },
+            { "optic_ERCO_blk_F", "", 1200, -1, "" },
             { "optic_Arco", "", 2500, -1, "" },
             { "optic_MRCO", "", 10000, -1, "" },
             { "optic_DMS", "", 15000, -1, "" },
@@ -203,8 +211,12 @@ class WeaponShops {
         conditions = "";
         items[] = {
             { "Binocular", "", 2000, -1, "call cxp_coplevel >= 1" },
-            { "ItemGPS", "", 2500, -1, "call cxp_coplevel >= 1" },
+            { "ItemGPS", "", 500, -1, "" },
+            { "ItemMap", "", 250, -1, "" },
+            { "ItemCompass", "", 250, -1, "" },
+            { "ItemWatch", "", 250, -1, "" },
             { "FirstAidKit", "", 5000, -1, "call cxp_coplevel >= 1" },
+            { "Chemlight_yellow", "", 1500, -1, "" },
             { "HandGrenade_Stone", $STR_W_items_Flashbang, 25000, -1, "call cxp_coplevel >= 1" },
             { "hgun_P07_snds_F", $STR_W_items_StunPistol, 5000, -1, "call cxp_coplevel >= 1" },
             { "hgun_PDW2000_F", "", 5000, -1, "call cxp_coplevel >= 1" }, //PDW 2000
@@ -226,7 +238,6 @@ class WeaponShops {
             { "arifle_SPAR_01_GL_blk_F", "", 700000, -1, "call cxp_coplevel >= 1" }, //SPAR-16 5,56MM COM GL Preta
             { "arifle_SPAR_02_blk_F", "", 900000, -1, "call cxp_coplevel >= 1" }, //SPAR-16S 5,56MM Preta
             { "arifle_Katiba_C_F", "", 350000, -1, "call cxp_coplevel >= 1" }, //Katiba Normal
-		        { "arifle_Katiba_GL_ACO_pointer_snds_F", "", 400000, -1, "call cxp_coplevel >= 1" }, // Katiba GL
             { "arifle_MXC_Black_F", "", 500000, -1, "call cxp_coplevel >= 1" } //MXC 6,5MM Preta
 
         };
@@ -260,6 +271,7 @@ class WeaponShops {
             { "muzzle_snds_58_blk_F", "", 20000, -1, "call cxp_coplevel >= 1" },
             { "optic_MRCO", "", 10000, -1, "call cxp_coplevel >= 1" },
             { "optic_DMS", "", 15000, -1, "call cxp_coplevel >= 1" },
+            { "optic_ERCO_blk_F", "", 1200, -1, "" },
             { "acc_pointer_IR", "", 20000, -1, "call cxp_coplevel >= 1" },
             { "muzzle_snds_M", "", 100000, -1, "call cxp_coplevel >= 1" },
             { "muzzle_snds_H", "", 100000, -1, "call cxp_coplevel >= 1" }

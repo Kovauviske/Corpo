@@ -30,8 +30,8 @@ class CarShops {
             { "C_Offroad_01_repair_F", "" },
             { "C_Van_01_transport_F", "" },
             { "C_Van_01_fuel_F", "" },
-			{ "C_Van_02_vehicle_F", "" },
-			{ "C_Van_02_transport_F", "" }
+			      { "C_Van_02_vehicle_F", "" },
+			      { "C_Van_02_transport_F", "" }
         };
     };
 
@@ -124,7 +124,12 @@ class CarShops {
         vehicles[] = {
 		      	{ "I_Truck_02_fuel_F", "call cxp_mediclevel >= 1" }, // zamak shell
             { "C_Offroad_01_F", "call cxp_mediclevel >= 1" },// offroad
-            { "C_Van_02_medevac_F", "call cxp_mediclevel >= 1" } // Van
+            { "O_MRAP_02_F", "call cxp_mediclevel >= 1" },// ifrit
+            { "B_MRAP_01_F", "call cxp_mediclevel >= 1" },// Hunter
+            { "I_MRAP_03_F", "call cxp_mediclevel >= 1" },// Hunter
+            { "C_SUV_01_F", "call cxp_mediclevel >= 1" },// SUV
+            { "C_Van_02_medevac_F", "call cxp_mediclevel >= 1" }, // Van
+            { "C_IDAP_Van_02_medevac_F", "call cxp_mediclevel >= 1" } // Van
         };
     };
 
@@ -133,7 +138,8 @@ class CarShops {
         vehicles[] = {
             { "B_Heli_Light_01_F", "call cxp_mediclevel >= 1" }, // humming bird samu
 		      	{ "O_Heli_Light_02_unarmed_F", "call cxp_mediclevel >= 1" }, // orca
-            { "O_Heli_Transport_04_medevac_F", "call cxp_mediclevel >= 1 && call cxp_donorlevel > 0" } // taru samu
+            { "O_Heli_Transport_04_medevac_F", "call cxp_mediclevel >= 1" }, // taru samu
+            { "I_Heli_Transport_02_F", "call cxp_mediclevel >= 1" } // mowhank samu
         };
     };
 
@@ -149,6 +155,7 @@ class CarShops {
             { "I_Truck_02_fuel_F", "call cxp_coplevel >= 3" },
             { "B_MRAP_01_F", "call cxp_coplevel >=3" }, // Hunter
             { "O_MRAP_02_F", "call cxp_coplevel >=3" }, // Hunter
+            { "B_GEN_Van_02_Vehicle_F", "call cxp_coplevel >=3" }, // Hunter
 		      	{ "C_Van_02_transport_F", "call cxp_coplevel >=3" }
         };
     };
@@ -158,7 +165,7 @@ class CarShops {
         vehicles[] = {
             { "B_Heli_Light_01_F", "call cxp_coplevel >= 3" }, //	MH-9 Hummingbird Policia
             { "I_Heli_light_03_unarmed_F", "call cxp_coplevel >= 3" }, //WY-55 Hellcat
-            { "O_Heli_Transport_04_bench_F", "call cxp_coplevel >= 3"} //Taru Policia
+            { "O_Heli_Transport_04_F", "call cxp_coplevel >= 3"} //Taru Policia
         };
     };
 
@@ -314,6 +321,19 @@ class CxpCfgVehicles {
         desarmar = false;
     };
 
+    class B_GEN_Van_02_Vehicle_F {
+        vItemSpace = 300;
+        conditions = "license_civ_rebellic || license_cop_cAir || license_med_mAir";
+        price = 2000000;
+        price_cop = 800000;
+        price_samu = 600000;
+        textures[] = {
+            { "HellCat GATE", "cop", {
+                "textures\cop\veh\c_vantrans.jpg"
+            }, "" }
+        };
+        desarmar = false;
+    };
 
     class I_Heli_light_03_unarmed_F {
         vItemSpace = 300;
@@ -430,6 +450,10 @@ class CxpCfgVehicles {
             { "Gate", "cop", {
                 "textures\cop\veh\c1_ifrit.jpg",
                 "textures\cop\veh\c2_ifrit.jpg"
+            }, "" },
+            { "Resgate", "med", {
+                "textures\resgate\veh\m_ifrit1.jpg",
+                "textures\resgate\veh\m_ifrit2.jpg"
             }, "" }
         };
         desarmar = false;
@@ -719,7 +743,7 @@ class CxpCfgVehicles {
             { "GATE", "cop", {
                 "textures\cop\veh\c_offgate.jpg"
             }, "" },
-            { "SAMU", "med", {
+            { "RESGATE", "med", {
                 "textures\resgate\veh\offSAMU.jpg"
             }, "" }
         };
@@ -812,8 +836,21 @@ class CxpCfgVehicles {
         price_samu = 20000;
         textures[] = {
             { "SAMU", "med", {
-                "textures\resgate\veh\vansamu.jpg",
-                "textures\resgate\veh\rodavanmedico.jpg"
+                "textures\resgate\veh\vansamu.jpg"
+            }, "" }
+        };
+        desarmar = false;
+    };
+
+    class C_IDAP_Van_02_medevac_F {
+        vItemSpace = 300;
+        conditions = "license_civ_driver || {!(playerSide isEqualTo civilian)}";
+        price = 100000;
+        price_cop = 50000;
+        price_samu = 20000;
+        textures[] = {
+            { "SAMU", "med", {
+                "textures\resgate\veh\vansamu.jpg"
             }, "" }
         };
         desarmar = false;
@@ -912,7 +949,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "SbtNoticias", "civ", {
                 "textures\civ\veh\sbt.jpg"
             }, "" },
-			{ "COP", "cop", {
+		      	{ "COP", "cop", {
                 "textures\cop\veh\hatspo_cop.jpg"
             }, "" },
             { "Google", "civ", {
@@ -929,9 +966,6 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price_cop = 2000;
         price_samu = 1500;
         textures[] = {
-            { "Brown", "cop", {
-                "\A3\Soft_F\Quadbike_01\Data\Quadbike_01_co.paa"
-            }, "" },
             { "Digi Desert", "reb", {
                 "\A3\Soft_F\Quadbike_01\Data\quadbike_01_opfor_co.paa"
             }, "" },
@@ -1146,6 +1180,12 @@ will modify the virtual space and the price of the vehicle, but other informatio
             { "Orange", "civ", {
                 "\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa"
             }, "" },
+            { "GATE", "cop", {
+                "textures\cop\veh\cop_suv.jpg"
+            }, "" },
+            { "RESGATE", "med", {
+                "textures\resgate\veh\samu_suv.jpg"
+            }, "" },
             { "Monster", "civ", {
                 "textures\civ\veh\monstersuv.jpg"
             }, "" }
@@ -1283,7 +1323,7 @@ will modify the virtual space and the price of the vehicle, but other informatio
         price_cop = 1600000;
         price_samu = 800000;
         textures[] = {
-            { "SAMU", "med", {
+            { "RESGATE", "med", {
                 "textures\resgate\veh\orca_samu.jpg"
             }, "" },
             { "Black", "cop", {

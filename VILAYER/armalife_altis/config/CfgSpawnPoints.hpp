@@ -174,21 +174,7 @@ class CfgSpawnPoints {
 
         class Medic {
             class Kavala {
-                displayName = "Bombeiro Kavala";
-                spawnMarker = "medic_spawn_1";
-                icon = "icons\logo_supMed.paa";
-                conditions = "";
-            };
-
-            class Athira {
-                displayName = "Bombeiro Athira (central)";
-                spawnMarker = "medic_spawn_2";
-                icon = "icons\logo_supMed.paa";
-                conditions = "";
-            };
-            
-            class Sofia {
-                displayName = "Bombeiro Sofia";
+                displayName = "Bombeiro Batalhão";
                 spawnMarker = "medic_spawn_3";
                 icon = "icons\logo_supMed.paa";
                 conditions = "";
@@ -258,7 +244,7 @@ class CfgSpawnPoints {
                 icon = "\a3\ui_f\data\map\MapControl\fuelstation_ca.paa";
                 conditions = "";
             };
-			
+
         };
 
         class Medic {
